@@ -28,3 +28,133 @@ npx: installed 66 in 2.68s
 
 >  NX   SUCCESS  Nx has successfully created the workspace.
 ```
+
+### package.json
+
+```json
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "nx": "nx",
+    "start": "nx serve",
+    "build": "nx build",
+    "test": "nx test",
+    "lint": "nx workspace-lint && nx lint",
+    "e2e": "nx e2e",
+    "affected:apps": "nx affected:apps",
+    "affected:libs": "nx affected:libs",
+    "affected:build": "nx affected:build",
+    "affected:e2e": "nx affected:e2e",
+    "affected:test": "nx affected:test",
+    "affected:lint": "nx affected:lint",
+    "affected:dep-graph": "nx affected:dep-graph",
+    "affected": "nx affected",
+    "format": "nx format:write",
+    "format:write": "nx format:write",
+    "format:check": "nx format:check",
+    "update": "nx migrate latest",
+    "workspace-generator": "nx workspace-generator",
+    "dep-graph": "nx dep-graph",
+    "help": "nx help"
+  },
+  "private": true,
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nrwl/tao": "11.6.3",
+    "@nrwl/cli": "11.6.3",
+    "@nrwl/workspace": "11.6.3",
+    "@types/node": "14.14.33",
+    "dotenv": "8.2.0",
+    "ts-node": "~9.1.1",
+    "typescript": "~4.0.3",
+    "prettier": "2.2.1"
+  }
+}
+```
+
+### workspace.json
+
+```json
+{
+  "version": 2,
+  "projects": {},
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  }
+}
+```
+
+### 
+
+```json
+// workspace/tsconfig.base.json (b16f50f)
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {}
+  },
+  "exclude": ["node_modules", "tmp"]
+}
+
+### nx.json
+
+```json
+// nx.json
+{
+  "npmScope": "buildmotion",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
+      }
+    }
+  },
+  "projects": {}
+}
+```
+
+### .prettierrc
+
+```json
+// .prettierrc
+{
+  "singleQuote": true
+}
+```
