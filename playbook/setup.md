@@ -29,7 +29,7 @@ npx: installed 66 in 2.68s
 >  NX   SUCCESS  Nx has successfully created the workspace.
 ```
 
-asdf
+### package.json
 
 ```json
 {
@@ -73,5 +73,88 @@ asdf
     "typescript": "~4.0.3",
     "prettier": "2.2.1"
   }
+}
+```
+
+### workspace.json
+
+```json
+{
+  "version": 2,
+  "projects": {},
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  }
+}
+```
+
+### 
+
+```json
+// workspace/tsconfig.base.json (b16f50f)
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {}
+  },
+  "exclude": ["node_modules", "tmp"]
+}
+
+### nx.json
+
+```json
+// nx.json
+{
+  "npmScope": "buildmotion",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
+      }
+    }
+  },
+  "projects": {}
+}
+```
+
+### .prettierrc
+
+```json
+// .prettierrc
+{
+  "singleQuote": true
 }
 ```
