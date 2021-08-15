@@ -28,3 +28,7 @@
 - AWS SDK
 - Deploy Web Application (SPA)
 - Deploy Lambda Function
+
+## Source Code
+
+> Git Repository: [https://github.com/buildmotion/angular-clean-architecture-workshop](https://github.com/buildmotion/angular-clean-architecture-workshop)

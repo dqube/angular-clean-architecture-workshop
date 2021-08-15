@@ -1,5 +1,17 @@
 # Setup
 
+## Source Code
+
+- Repository: [https://github.com/buildmotion/angular-clean-architecture-workshop](https://github.com/buildmotion/angular-clean-architecture-workshop)
+- Branch: [https://github.com/buildmotion/angular-clean-architecture-workshop/tree/1_setup/create-nx-workspace](https://github.com/buildmotion/angular-clean-architecture-workshop/tree/1_setup/create-nx-workspace)
+
+```ts
+git clone https://github.com/buildmotion/angular-clean-architecture-workshop.git
+cd angular-clean-architecture-workshop
+git pull
+git checkout 1_setup/create-nx-workspace
+```
+
 ## Create New Workspace
 
  Using the Nx CLI to create a new workspace will create the workspace using the latest version of the Nrwl package. To target a specific package version you want to go to [npmjs.com](npmjs.com) to determine the specific version number you want to use.
@@ -8,11 +20,17 @@
 
 ![https://www.npmjs.com/package/@nrwl/angular](resources/setup/npmjs-nrwl-angular.png)
 
-We will target version 11 for our new workspace. Use the *npx* command to create an empty workspace for our projects.
+We will target version 11 for our new workspace. Use the *npx* command to create an empty workspace for our projects. I typically use the name *workspace* to indicate that the folder contains all of the workspace items.
 
-> npx create-nx-workspace@11.6.3 workspace --npm-scope=buildmotion
+- `--npm-scope`: This allows you to use a scope name for imports, a much easier way to locate the packages in your workspace.
+- Create an *empty* workspace so you can add projects to it using additional CLI commands.
+
+> npx create-nx-workspace@11.6.3 workspace --npm-scope=buildmotion --preset=empty -d
+>
 
 The output of the CLI command should look similar to the output listed below.
+
+> ***Pro Tip***: Specify a version to target a specific version workspace - otherwise, you will get the latest version released. Sometimes the newest/latest version is not quite ready for prime time.
 
 ```ts
 npx create-nx-workspace@11.6.3 workspace --npm-scope=buildmotion
@@ -28,6 +46,8 @@ npx: installed 66 in 2.68s
 
 >  NX   SUCCESS  Nx has successfully created the workspace.
 ```
+
+## Empty Workspace
 
 ### package.json
 
@@ -112,6 +132,7 @@ npx: installed 66 in 2.68s
   },
   "exclude": ["node_modules", "tmp"]
 }
+```
 
 ### nx.json
 
