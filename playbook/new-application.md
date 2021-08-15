@@ -60,7 +60,6 @@ UPDATE package.json
 UPDATE .vscode/extensions.json
 UPDATE nx.json
 ```
-
 ### Available Options
 
 asd
@@ -93,6 +92,9 @@ nx generate @nrwl/angular:application dashboard --help
   |--skip-nx-cache         |Skip the use of Nx cache.|
   |--help                  |Show available options for project target.|
 
+### Serve the New Application 
+
+![serve-new-app.png](resources/setup/serve-new-app.png)
 ## Angular Template
 
  This workshop will take advantage of a template to provide the styles and layout for our application.
