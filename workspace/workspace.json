@@ -17,15 +17,15 @@
             "tsConfig": "apps/dashboard/tsconfig.app.json",
             "aot": true,
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "libs/shared/assets/src/assets",
-                "output": "assets"
-              },
-              "apps/dashboard/src/assets/img/favicon.png",
+              "apps/dashboard/src/favicon.ico",
               "apps/dashboard/src/assets"
             ],
-            "styles": ["apps/dashboard/src/styles.scss"],
+            "styles": [
+              "apps/dashboard/src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css",
+              "apps/dashboard/src/assets/scss/black-dashboard.scss",
+              "apps/dashboard/src/assets/css/nucleo-icons.css"
+            ],
             "scripts": []
           },
           "configurations": {
