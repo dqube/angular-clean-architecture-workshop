@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import Chart from 'chart.js';
 
 @Component({
-  selector: "app-rtl",
-  templateUrl: "rtl.component.html"
+  selector: 'app-rtl',
+  templateUrl: 'rtl.component.html'
 })
 export class RtlComponent implements OnInit {
   public canvas : any;
@@ -11,14 +11,14 @@ export class RtlComponent implements OnInit {
   public datasets: any;
   public data: any;
   public myChartData;
-  public clicked: boolean = true;
-  public clicked1: boolean = false;
-  public clicked2: boolean = false;
+  public clicked = true;
+  public clicked1 = false;
+  public clicked2 = false;
 
   constructor() {}
 
   ngOnInit() {
-    var gradientChartOptionsConfigurationWithTooltipBlue: any = {
+    const gradientChartOptionsConfigurationWithTooltipBlue: any = {
       maintainAspectRatio: false,
       legend: {
         display: false
@@ -30,9 +30,9 @@ export class RtlComponent implements OnInit {
         bodyFontColor: '#666',
         bodySpacing: 4,
         xPadding: 12,
-        mode: "nearest",
+        mode: 'nearest',
         intersect: 0,
-        position: "nearest"
+        position: 'nearest'
       },
       responsive: true,
       scales: {
@@ -41,13 +41,13 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(29,140,248,0.0)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             suggestedMin: 60,
             suggestedMax: 125,
             padding: 20,
-            fontColor: "#2380f7"
+            fontColor: '#2380f7'
           }
         }],
 
@@ -56,17 +56,17 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(29,140,248,0.1)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             padding: 20,
-            fontColor: "#2380f7"
+            fontColor: '#2380f7'
           }
         }]
       }
     };
 
-    var gradientChartOptionsConfigurationWithTooltipPurple: any = {
+    const gradientChartOptionsConfigurationWithTooltipPurple: any = {
       maintainAspectRatio: false,
       legend: {
         display: false
@@ -78,9 +78,9 @@ export class RtlComponent implements OnInit {
         bodyFontColor: '#666',
         bodySpacing: 4,
         xPadding: 12,
-        mode: "nearest",
+        mode: 'nearest',
         intersect: 0,
-        position: "nearest"
+        position: 'nearest'
       },
       responsive: true,
       scales: {
@@ -89,13 +89,13 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(29,140,248,0.0)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             suggestedMin: 60,
             suggestedMax: 125,
             padding: 20,
-            fontColor: "#9a9a9a"
+            fontColor: '#9a9a9a'
           }
         }],
 
@@ -104,17 +104,17 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(225,78,202,0.1)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             padding: 20,
-            fontColor: "#9a9a9a"
+            fontColor: '#9a9a9a'
           }
         }]
       }
     };
 
-    var gradientChartOptionsConfigurationWithTooltipRed: any = {
+    const gradientChartOptionsConfigurationWithTooltipRed: any = {
       maintainAspectRatio: false,
       legend: {
         display: false
@@ -126,9 +126,9 @@ export class RtlComponent implements OnInit {
         bodyFontColor: '#666',
         bodySpacing: 4,
         xPadding: 12,
-        mode: "nearest",
+        mode: 'nearest',
         intersect: 0,
-        position: "nearest"
+        position: 'nearest'
       },
       responsive: true,
       scales: {
@@ -137,13 +137,13 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(29,140,248,0.0)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             suggestedMin: 60,
             suggestedMax: 125,
             padding: 20,
-            fontColor: "#9a9a9a"
+            fontColor: '#9a9a9a'
           }
         }],
 
@@ -152,17 +152,17 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(233,32,16,0.1)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             padding: 20,
-            fontColor: "#9a9a9a"
+            fontColor: '#9a9a9a'
           }
         }]
       }
     };
 
-    var gradientChartOptionsConfigurationWithTooltipOrange: any = {
+    const gradientChartOptionsConfigurationWithTooltipOrange: any = {
       maintainAspectRatio: false,
       legend: {
         display: false
@@ -174,9 +174,9 @@ export class RtlComponent implements OnInit {
         bodyFontColor: '#666',
         bodySpacing: 4,
         xPadding: 12,
-        mode: "nearest",
+        mode: 'nearest',
         intersect: 0,
-        position: "nearest"
+        position: 'nearest'
       },
       responsive: true,
       scales: {
@@ -185,13 +185,13 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(29,140,248,0.0)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             suggestedMin: 50,
             suggestedMax: 110,
             padding: 20,
-            fontColor: "#ff8a76"
+            fontColor: '#ff8a76'
           }
         }],
 
@@ -200,17 +200,17 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(220,53,69,0.1)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             padding: 20,
-            fontColor: "#ff8a76"
+            fontColor: '#ff8a76'
           }
         }]
       }
     };
 
-    var gradientChartOptionsConfigurationWithTooltipGreen: any = {
+    const gradientChartOptionsConfigurationWithTooltipGreen: any = {
       maintainAspectRatio: false,
       legend: {
         display: false
@@ -222,9 +222,9 @@ export class RtlComponent implements OnInit {
         bodyFontColor: '#666',
         bodySpacing: 4,
         xPadding: 12,
-        mode: "nearest",
+        mode: 'nearest',
         intersect: 0,
-        position: "nearest"
+        position: 'nearest'
       },
       responsive: true,
       scales: {
@@ -233,13 +233,13 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(29,140,248,0.0)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             suggestedMin: 50,
             suggestedMax: 125,
             padding: 20,
-            fontColor: "#9e9e9e"
+            fontColor: '#9e9e9e'
           }
         }],
 
@@ -248,18 +248,18 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(0,242,195,0.1)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             padding: 20,
-            fontColor: "#9e9e9e"
+            fontColor: '#9e9e9e'
           }
         }]
       }
     };
 
 
-    var gradientBarChartConfiguration: any = {
+    const gradientBarChartConfiguration: any = {
       maintainAspectRatio: false,
       legend: {
         display: false
@@ -271,9 +271,9 @@ export class RtlComponent implements OnInit {
         bodyFontColor: '#666',
         bodySpacing: 4,
         xPadding: 12,
-        mode: "nearest",
+        mode: 'nearest',
         intersect: 0,
-        position: "nearest"
+        position: 'nearest'
       },
       responsive: true,
       scales: {
@@ -282,13 +282,13 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(29,140,248,0.1)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             suggestedMin: 60,
             suggestedMax: 120,
             padding: 20,
-            fontColor: "#9e9e9e"
+            fontColor: '#9e9e9e'
           }
         }],
 
@@ -297,18 +297,18 @@ export class RtlComponent implements OnInit {
           gridLines: {
             drawBorder: false,
             color: 'rgba(29,140,248,0.1)',
-            zeroLineColor: "transparent",
+            zeroLineColor: 'transparent',
           },
           ticks: {
             padding: 20,
-            fontColor: "#9e9e9e"
+            fontColor: '#9e9e9e'
           }
         }]
       }
     };
 
-    this.canvas = document.getElementById("chartLineRed");
-    this.ctx = this.canvas.getContext("2d");
+    this.canvas = document.getElementById('chartLineRed');
+    this.ctx = this.canvas.getContext('2d');
 
     var gradientStroke = this.ctx.createLinearGradient(0, 230, 0, 50);
 
@@ -319,7 +319,7 @@ export class RtlComponent implements OnInit {
     var data = {
       labels: ['يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
       datasets: [{
-        label: "البيانات",
+        label: 'البيانات',
         fill: true,
         backgroundColor: gradientStroke,
         borderColor: '#ec250d',
@@ -344,8 +344,8 @@ export class RtlComponent implements OnInit {
     });
 
 
-    this.canvas = document.getElementById("chartLineGreen");
-    this.ctx = this.canvas.getContext("2d");
+    this.canvas = document.getElementById('chartLineGreen');
+    this.ctx = this.canvas.getContext('2d');
 
 
     var gradientStroke = this.ctx.createLinearGradient(0, 230, 0, 50);
@@ -357,7 +357,7 @@ export class RtlComponent implements OnInit {
     var data = {
       labels: ['يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر'],
       datasets: [{
-        label: "مجموعة بياناتي الأولى",
+        label: 'مجموعة بياناتي الأولى',
         fill: true,
         backgroundColor: gradientStroke,
         borderColor: '#00d6b4',
@@ -384,7 +384,7 @@ export class RtlComponent implements OnInit {
 
 
 
-    var chart_labels = ['يناير', 'فبراير', 'مارس', 'أبريل', ' مايو', ' يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+    const chart_labels = ['يناير', 'فبراير', 'مارس', 'أبريل', ' مايو', ' يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
     this.datasets = [
       [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
       [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120],
@@ -394,8 +394,8 @@ export class RtlComponent implements OnInit {
 
 
 
-    this.canvas = document.getElementById("chartBig1");
-    this.ctx = this.canvas.getContext("2d");
+    this.canvas = document.getElementById('chartBig1');
+    this.ctx = this.canvas.getContext('2d');
 
     var gradientStroke = this.ctx.createLinearGradient(0, 230, 0, 50);
 
@@ -403,12 +403,12 @@ export class RtlComponent implements OnInit {
     gradientStroke.addColorStop(0.4, 'rgba(233,32,16,0.0)');
     gradientStroke.addColorStop(0, 'rgba(233,32,16,0)'); //red colors
 
-    var config = {
+    const config = {
       type: 'line',
       data: {
         labels: chart_labels,
         datasets: [{
-          label: "مجموعة بياناتي الأولى",
+          label: 'مجموعة بياناتي الأولى',
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: '#ec250d',
@@ -430,8 +430,8 @@ export class RtlComponent implements OnInit {
     this.myChartData = new Chart(this.ctx, config);
 
 
-    this.canvas = document.getElementById("CountryChart");
-    this.ctx  = this.canvas.getContext("2d");
+    this.canvas = document.getElementById('CountryChart');
+    this.ctx  = this.canvas.getContext('2d');
     var gradientStroke = this.ctx.createLinearGradient(0, 230, 0, 50);
 
     gradientStroke.addColorStop(1, 'rgba(29,140,248,0.2)');
@@ -448,7 +448,7 @@ export class RtlComponent implements OnInit {
       data: {
         labels: ['الولايات المتحدة الأمريكية', 'ألمانيا', 'أستراليا', 'المملكة المتحدة', 'رومانيا', 'البرازيل'],
         datasets: [{
-          label: "بلدان",
+          label: 'بلدان',
           fill: true,
           backgroundColor: gradientStroke,
           hoverBackgroundColor: gradientStroke,
