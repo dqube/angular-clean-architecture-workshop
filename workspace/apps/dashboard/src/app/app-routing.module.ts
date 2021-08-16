@@ -1,10 +1,18 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+
+const routeOptions: ExtraOptions = {
+  anchorScrolling: 'enabled',
+  enableTracing: true,
+  onSameUrlNavigation: 'ignore',
+  // preloadingStrategy: 'PreloadAllModules',
+  useHash: false,
+};
 
 const routes: Routes = [
   {
@@ -48,9 +56,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes, {
-      useHash: true,
-    }),
+    RouterModule.forRoot(routes, routeOptions),
   ],
   exports: [RouterModule],
 })
