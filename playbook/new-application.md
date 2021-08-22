@@ -120,3 +120,20 @@ The original template contains several layout options and widgets.
  - left navigation
 
 ![tempalte-shell](resources/setup/template-shell.png)
+
+
+### Styles
+
+```json
+{
+  "glob": "**/*",
+  "input": "libs/shared/assets/src/assets",
+  "output": "assets"
+},
+              ```
+
+### Update JavaScript References
+
+```ts
+yarn add @popperjs/core@2.9.2
+```
