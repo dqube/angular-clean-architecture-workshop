@@ -1,73 +1,73 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { ButtonsComponent } from "./buttons/buttons.component";
-import { GridComponent } from "./grid/grid.component";
-import { IconsComponent } from "./icons/icons.component";
-import { NotificationsComponent } from "./notifications/notifications.component";
-import { PanelsComponent } from "./panels/panels.component";
-import { SweetalertComponent } from "./sweetalert/sweetalert.component";
-import { TypographyComponent } from "./typography/typography.component";
+import { ButtonsComponent } from './buttons/buttons.component';
+import { GridComponent } from './grid/grid.component';
+import { IconsComponent } from './icons/icons.component';
+import { NotificationsComponent } from './notifications/notifications.component';
+import { PanelsComponent } from './panels/panels.component';
+import { SweetalertComponent } from './sweetalert/sweetalert.component';
+import { TypographyComponent } from './typography/typography.component';
 
 export const ComponentsRoutes: Routes = [
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "buttons",
+        path: 'buttons',
         component: ButtonsComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "grid",
+        path: 'grid',
         component: GridComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "icons",
+        path: 'icons',
         component: IconsComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "notifications",
+        path: 'notifications',
         component: NotificationsComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "panels",
+        path: 'panels',
         component: PanelsComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "sweet-alert",
+        path: 'sweet-alert',
         component: SweetalertComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "typography",
+        path: 'typography',
         component: TypographyComponent
       }
     ]

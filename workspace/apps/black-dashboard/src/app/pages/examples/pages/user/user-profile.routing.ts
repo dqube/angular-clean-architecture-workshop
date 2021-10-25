@@ -1,13 +1,13 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { UserComponent } from "./user.component";
+import { UserComponent } from './user.component';
 
 export const UserRoutes: Routes = [
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "pages/profile",
+        path: 'pages/profile',
         component: UserComponent
       }
     ]

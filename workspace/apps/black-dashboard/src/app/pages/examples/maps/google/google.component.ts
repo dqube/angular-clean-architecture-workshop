@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 declare const google: any;
 
 @Component({
-  selector: "app-google",
-  templateUrl: "google.component.html"
+  selector: 'app-google',
+  templateUrl: 'google.component.html'
 })
 export class GoogleComponent implements OnInit {
   constructor() {}
@@ -11,27 +11,27 @@ export class GoogleComponent implements OnInit {
   ngOnInit() {
     // Regular Map
     var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-    var mapOptions = {
+    const mapOptions = {
       zoom: 8,
       center: myLatlng,
       scrollwheel: false //we disable de scroll over the map, it is a really annoing when you scroll through page
     };
 
     var map = new google.maps.Map(
-      document.getElementById("regularMap"),
+      document.getElementById('regularMap'),
       mapOptions
     );
 
     var marker = new google.maps.Marker({
       position: myLatlng,
-      title: "Regular Map!"
+      title: 'Regular Map!'
     });
 
     marker.setMap(map);
 
     // Custom Skin & Settings Map
     var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-    var mapOptions1 = {
+    const mapOptions1 = {
       zoom: 13,
       center: myLatlng,
       scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
@@ -39,7 +39,7 @@ export class GoogleComponent implements OnInit {
       zoomControl: true,
       styles: [
         {
-          featureType: "water",
+          featureType: 'water',
           stylers: [
             {
               saturation: 43
@@ -48,16 +48,16 @@ export class GoogleComponent implements OnInit {
               lightness: -11
             },
             {
-              hue: "#0088ff"
+              hue: '#0088ff'
             }
           ]
         },
         {
-          featureType: "road",
-          elementType: "geometry.fill",
+          featureType: 'road',
+          elementType: 'geometry.fill',
           stylers: [
             {
-              hue: "#ff0000"
+              hue: '#ff0000'
             },
             {
               saturation: -100
@@ -68,11 +68,11 @@ export class GoogleComponent implements OnInit {
           ]
         },
         {
-          featureType: "road",
-          elementType: "geometry.stroke",
+          featureType: 'road',
+          elementType: 'geometry.stroke',
           stylers: [
             {
-              color: "#808080"
+              color: '#808080'
             },
             {
               lightness: 54
@@ -80,90 +80,90 @@ export class GoogleComponent implements OnInit {
           ]
         },
         {
-          featureType: "landscape.man_made",
-          elementType: "geometry.fill",
+          featureType: 'landscape.man_made',
+          elementType: 'geometry.fill',
           stylers: [
             {
-              color: "#ece2d9"
+              color: '#ece2d9'
             }
           ]
         },
         {
-          featureType: "poi.park",
-          elementType: "geometry.fill",
+          featureType: 'poi.park',
+          elementType: 'geometry.fill',
           stylers: [
             {
-              color: "#ccdca1"
+              color: '#ccdca1'
             }
           ]
         },
         {
-          featureType: "road",
-          elementType: "labels.text.fill",
+          featureType: 'road',
+          elementType: 'labels.text.fill',
           stylers: [
             {
-              color: "#767676"
+              color: '#767676'
             }
           ]
         },
         {
-          featureType: "road",
-          elementType: "labels.text.stroke",
+          featureType: 'road',
+          elementType: 'labels.text.stroke',
           stylers: [
             {
-              color: "#ffffff"
+              color: '#ffffff'
             }
           ]
         },
         {
-          featureType: "poi",
+          featureType: 'poi',
           stylers: [
             {
-              visibility: "off"
+              visibility: 'off'
             }
           ]
         },
         {
-          featureType: "landscape.natural",
-          elementType: "geometry.fill",
+          featureType: 'landscape.natural',
+          elementType: 'geometry.fill',
           stylers: [
             {
-              visibility: "on"
+              visibility: 'on'
             },
             {
-              color: "#b8cb93"
+              color: '#b8cb93'
             }
           ]
         },
         {
-          featureType: "poi.park",
+          featureType: 'poi.park',
           stylers: [
             {
-              visibility: "on"
+              visibility: 'on'
             }
           ]
         },
         {
-          featureType: "poi.sports_complex",
+          featureType: 'poi.sports_complex',
           stylers: [
             {
-              visibility: "on"
+              visibility: 'on'
             }
           ]
         },
         {
-          featureType: "poi.medical",
+          featureType: 'poi.medical',
           stylers: [
             {
-              visibility: "on"
+              visibility: 'on'
             }
           ]
         },
         {
-          featureType: "poi.business",
+          featureType: 'poi.business',
           stylers: [
             {
-              visibility: "simplified"
+              visibility: 'simplified'
             }
           ]
         }
@@ -171,20 +171,20 @@ export class GoogleComponent implements OnInit {
     };
 
     var map = new google.maps.Map(
-      document.getElementById("customSkinMap"),
+      document.getElementById('customSkinMap'),
       mapOptions1
     );
 
     var marker = new google.maps.Marker({
       position: myLatlng,
-      title: "Custom Skin & Settings Map!"
+      title: 'Custom Skin & Settings Map!'
     });
 
     marker.setMap(map);
 
     // Satellite Map
     var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-    var mapOptions2 = {
+    const mapOptions2 = {
       zoom: 3,
       scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
       center: myLatlng,
@@ -192,13 +192,13 @@ export class GoogleComponent implements OnInit {
     };
 
     var map = new google.maps.Map(
-      document.getElementById("satelliteMap"),
+      document.getElementById('satelliteMap'),
       mapOptions2
     );
 
     var marker = new google.maps.Marker({
       position: myLatlng,
-      title: "Satellite Map!"
+      title: 'Satellite Map!'
     });
 
     marker.setMap(map);

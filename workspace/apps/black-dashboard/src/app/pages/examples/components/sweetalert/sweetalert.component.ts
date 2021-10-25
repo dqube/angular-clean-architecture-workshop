@@ -1,148 +1,148 @@
-import { Component, OnInit } from "@angular/core";
-import swal from "sweetalert2";
+import { Component, OnInit } from '@angular/core';
+import swal from 'sweetalert2';
 @Component({
-  selector: "app-sweetalert",
-  templateUrl: "sweetalert.component.html"
+  selector: 'app-sweetalert',
+  templateUrl: 'sweetalert.component.html'
 })
 export class SweetalertComponent implements OnInit {
   constructor() {}
   showSwal(type) {
-    if (type == "basic") {
+    if (type == 'basic') {
       swal.fire({
-        title: "Here's a message!",
+        title: 'Here\'s a message!',
         buttonsStyling: false,
         customClass:{
-          confirmButton: "btn btn-success"
+          confirmButton: 'btn btn-success'
         }
       })
-    } else if (type == "title-and-text") {
+    } else if (type == 'title-and-text') {
       swal.fire({
-        title: "Here's a message!",
-        text: "It's pretty, isn't it?",
+        title: 'Here\'s a message!',
+        text: 'It\'s pretty, isn\'t it?',
         buttonsStyling: false,
         customClass:{
-          confirmButton: "btn btn-info"
+          confirmButton: 'btn btn-info'
         }
       })
-    } else if (type == "success-message") {
+    } else if (type == 'success-message') {
       swal.fire({
-        title: "Good job!",
-        text: "You clicked the button!",
+        title: 'Good job!',
+        text: 'You clicked the button!',
         buttonsStyling: false,
         customClass:{
-          confirmButton: "btn btn-success",
+          confirmButton: 'btn btn-success',
         },
-        icon: "success"
+        icon: 'success'
       })
-    } else if (type == "warning-message-and-confirmation") {
+    } else if (type == 'warning-message-and-confirmation') {
       swal
         .fire({
-          title: "Are you sure?",
-          text: "You won't be able to revert this!",
-          icon: "warning",
+          title: 'Are you sure?',
+          text: 'You won\'t be able to revert this!',
+          icon: 'warning',
           showCancelButton: true,
           customClass:{
-            cancelButton: "btn btn-danger",
-            confirmButton: "btn btn-success mr-1",
+            cancelButton: 'btn btn-danger',
+            confirmButton: 'btn btn-success mr-1',
           },
-          confirmButtonText: "Yes, delete it!",
+          confirmButtonText: 'Yes, delete it!',
           buttonsStyling: false
         })
         .then(result => {
           if (result.value) {
             swal.fire({
-              title: "Deleted!",
-              text: "Your file has been deleted.",
-              icon: "success",
+              title: 'Deleted!',
+              text: 'Your file has been deleted.',
+              icon: 'success',
               customClass:{
-                confirmButton: "btn btn-success",
+                confirmButton: 'btn btn-success',
               },
               buttonsStyling: false
             });
           }
         })
-    } else if (type == "warning-message-and-cancel") {
+    } else if (type == 'warning-message-and-cancel') {
       swal
         .fire({
-          title: "Are you sure?",
-          text: "You will not be able to recover this imaginary file!",
-          icon: "warning",
+          title: 'Are you sure?',
+          text: 'You will not be able to recover this imaginary file!',
+          icon: 'warning',
           showCancelButton: true,
-          confirmButtonText: "Yes, delete it!",
-          cancelButtonText: "No, keep it",
+          confirmButtonText: 'Yes, delete it!',
+          cancelButtonText: 'No, keep it',
           customClass:{
-            confirmButton: "btn btn-success mr-1",
-            cancelButton: "btn btn-danger",
+            confirmButton: 'btn btn-success mr-1',
+            cancelButton: 'btn btn-danger',
           },
           buttonsStyling: false
         })
         .then(result => {
           if (result.value) {
             swal.fire({
-              title: "Deleted!",
-              text: "Your imaginary file has been deleted.",
-              icon: "success",
+              title: 'Deleted!',
+              text: 'Your imaginary file has been deleted.',
+              icon: 'success',
               customClass:{
-                confirmButton: "btn btn-success",
+                confirmButton: 'btn btn-success',
               },
               buttonsStyling: false
             })
           } else {
             swal.fire({
-              title: "Cancelled",
-              text: "Your imaginary file is safe :)",
-              icon: "error",
+              title: 'Cancelled',
+              text: 'Your imaginary file is safe :)',
+              icon: 'error',
               customClass:{
-                confirmButton: "btn btn-info",
+                confirmButton: 'btn btn-info',
               },
               buttonsStyling: false
             });
           }
         });
-    } else if (type == "custom-html") {
+    } else if (type == 'custom-html') {
       swal.fire({
-        title: "HTML example",
+        title: 'HTML example',
         buttonsStyling: false,
         customClass:{
-          confirmButton: "btn btn-success mr-1",
+          confirmButton: 'btn btn-success mr-1',
         },
         html:
-          "You can use <b>bold text</b>, " +
+          'You can use <b>bold text</b>, ' +
           '<a href="https://github.com">links</a> ' +
-          "and other HTML tags"
+          'and other HTML tags'
       });
-    } else if (type == "auto-close") {
+    } else if (type == 'auto-close') {
       swal.fire({
-        title: "Auto close alert!",
-        text: "I will close in 2 seconds.",
+        title: 'Auto close alert!',
+        text: 'I will close in 2 seconds.',
         timer: 2000,
         showConfirmButton: false
       });
-    } else if (type == "input-field") {
+    } else if (type == 'input-field') {
       swal
         .fire({
-          title: "Input something",
+          title: 'Input something',
           html:
             '<div class="form-group">' +
             '<input id="input-field" type="text" class="form-control" />' +
-            "</div>",
+            '</div>',
           showCancelButton: true,
           customClass:{
-            confirmButton: "btn btn-success mr-1",
-            cancelButton: "btn btn-danger",
+            confirmButton: 'btn btn-success mr-1',
+            cancelButton: 'btn btn-danger',
           },
           buttonsStyling: false
         })
         .then(function(result) {
           swal.fire({
-            icon: "success",
+            icon: 'success',
             html:
-              "You entered: <strong>" +
-              (document.getElementById("input-field") as HTMLInputElement)
+              'You entered: <strong>' +
+              (document.getElementById('input-field') as HTMLInputElement)
                 .value +
-              "</strong>",
+              '</strong>',
             customClass:{
-              confirmButton: "btn btn-success",
+              confirmButton: 'btn btn-success',
             },
             buttonsStyling: false
           });

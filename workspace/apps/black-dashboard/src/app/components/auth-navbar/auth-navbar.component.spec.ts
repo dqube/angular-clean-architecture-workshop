@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthNavbarComponent } from "./auth-navbar.component";
+import { AuthNavbarComponent } from './auth-navbar.component';
 
-describe("AuthNavbarComponent", () => {
+describe('AuthNavbarComponent', () => {
   let component: AuthNavbarComponent;
   let fixture: ComponentFixture<AuthNavbarComponent>;
 
@@ -18,7 +18,7 @@ describe("AuthNavbarComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

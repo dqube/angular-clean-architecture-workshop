@@ -1,16 +1,16 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from "@angular/core";
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: "app-picture-upload",
-  templateUrl: "./picture-upload.component.html",
-  styleUrls: ["./picture-upload.component.css"]
+  selector: 'app-picture-upload',
+  templateUrl: './picture-upload.component.html',
+  styleUrls: ['./picture-upload.component.css']
 })
 export class PictureUploadComponent implements OnInit {
-  @Input() avatar: boolean = false;
+  @Input() avatar = false;
   @Input() image: string;
   file: any = {};
   imagePreviewUrl: any = {};
-  @ViewChild("fileInput") fileInput: ElementRef;
+  @ViewChild('fileInput') fileInput: ElementRef;
   constructor() {
     this.handleImageChange = this.handleImageChange.bind(this);
   }
@@ -21,13 +21,13 @@ export class PictureUploadComponent implements OnInit {
       this.image !== undefined
         ? this.image
         : this.avatar
-        ? "assets/img/placeholder.jpg"
-        : "assets/img/image_placeholder.jpg";
+        ? 'assets/img/placeholder.jpg'
+        : 'assets/img/image_placeholder.jpg';
   }
   handleImageChange($event) {
     $event.preventDefault();
-    let reader = new FileReader();
-    let file = $event.target.files[0];
+    const reader = new FileReader();
+    const file = $event.target.files[0];
     reader.onloadend = () => {
       this.file = file;
       this.imagePreviewUrl = reader.result;
@@ -45,8 +45,8 @@ export class PictureUploadComponent implements OnInit {
       this.image !== undefined
         ? this.image
         : this.avatar
-        ? "assets/img/placeholder.jpg"
-        : "assets/img/image_placeholder.jpg";
+        ? 'assets/img/placeholder.jpg'
+        : 'assets/img/image_placeholder.jpg';
     this.fileInput.nativeElement.value = null;
   }
   handleSubmit($event) {

@@ -1,8 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-regular",
-  templateUrl: "regular.component.html"
+  selector: 'app-regular',
+  templateUrl: 'regular.component.html'
 })
 export class RegularComponent implements OnInit {
   constructor() {}

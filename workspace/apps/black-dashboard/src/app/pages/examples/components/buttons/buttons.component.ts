@@ -1,8 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-buttons",
-  templateUrl: "buttons.component.html"
+  selector: 'app-buttons',
+  templateUrl: 'buttons.component.html'
 })
 export class ButtonsComponent implements OnInit {
   page = 2;

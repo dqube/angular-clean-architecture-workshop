@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import Stepper from "bs-stepper";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { Component, OnInit } from '@angular/core';
+import Stepper from 'bs-stepper';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: "app-wizard",
-  templateUrl: "wizard.component.html"
+  selector: 'app-wizard',
+  templateUrl: 'wizard.component.html'
 })
 export class WizardComponent implements OnInit {
   value = 15;
@@ -31,9 +31,9 @@ export class WizardComponent implements OnInit {
   constructor(public formBuilder: FormBuilder) {}
 
   ngOnInit() {
-    var wizard = document.getElementsByClassName("card-wizard")[0];
-    wizard.classList.add("active");
-    var stepper = document.getElementById("wizardProfile");
+    const wizard = document.getElementsByClassName('card-wizard')[0];
+    wizard.classList.add('active');
+    const stepper = document.getElementById('wizardProfile');
 
     this.stepper = new Stepper(stepper, {
       linear: false,
@@ -41,14 +41,14 @@ export class WizardComponent implements OnInit {
     });
 
     this.formWizard = this.formBuilder.group({
-      firstName: ["", [Validators.required, Validators.minLength(1)]],
-      lastName: ["", [Validators.required, Validators.minLength(1)]],
+      firstName: ['', [Validators.required, Validators.minLength(1)]],
+      lastName: ['', [Validators.required, Validators.minLength(1)]],
       email: [
-        "",
+        '',
         [Validators.required, Validators.email, Validators.minLength(1)]
       ],
-      phone: ["", [Validators.required]],
-      select: [""]
+      phone: ['', [Validators.required]],
+      select: ['']
     });
   }
   get registerF() {
@@ -65,7 +65,7 @@ export class WizardComponent implements OnInit {
   }
   next() {
     if (this.formWizard.valid) {
-      console.log("aici");
+      console.log('aici');
       if (this.value < 51) {
         this.step++;
         this.value += 35;
@@ -88,6 +88,6 @@ export class WizardComponent implements OnInit {
     }
   }
   addCheched(event) {
-    event.target.classList.add("checked");
+    event.target.classList.add('checked');
   }
 }

@@ -1,13 +1,13 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { ChartsComponent } from "./charts.component";
+import { ChartsComponent } from './charts.component';
 
 export const ChartsRoutes: Routes = [
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "",
+        path: '',
         component: ChartsComponent
       }
     ]

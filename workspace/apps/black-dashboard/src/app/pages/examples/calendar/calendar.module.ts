@@ -1,12 +1,12 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
-import { FormsModule } from "@angular/forms";
-import { ModalModule } from "ngx-bootstrap/modal";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
-import { CalendarComponent } from "./calendar.component";
+import { CalendarComponent } from './calendar.component';
 
-import { CalendarRoutes } from "./calendar.routing";
+import { CalendarRoutes } from './calendar.routing';
 
 @NgModule({
   imports: [

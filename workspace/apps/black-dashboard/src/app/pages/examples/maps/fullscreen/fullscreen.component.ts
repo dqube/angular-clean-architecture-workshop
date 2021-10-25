@@ -1,282 +1,282 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Component, OnInit, OnDestroy } from '@angular/core';
 declare const google: any;
 
 @Component({
-  selector: "app-fullscreen",
-  templateUrl: "fullscreen.component.html"
+  selector: 'app-fullscreen',
+  templateUrl: 'fullscreen.component.html'
 })
 export class FullscreenComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit() {
-    var body = document.getElementsByTagName("body")[0];
-    body.classList.add("full-screen-map");
-    var navbar = document.getElementsByClassName("navbar")[0];
-    navbar.classList.remove("navbar-transparent");
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.add('full-screen-map');
+    const navbar = document.getElementsByClassName('navbar')[0];
+    navbar.classList.remove('navbar-transparent');
 
-    var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-    var mapOptions = {
+    const myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+    const mapOptions = {
       zoom: 13,
       center: myLatlng,
       scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
       styles: [
         {
-          elementType: "geometry",
+          elementType: 'geometry',
           stylers: [
             {
-              color: "#1d2c4d"
+              color: '#1d2c4d'
             }
           ]
         },
         {
-          elementType: "labels.text.fill",
+          elementType: 'labels.text.fill',
           stylers: [
             {
-              color: "#8ec3b9"
+              color: '#8ec3b9'
             }
           ]
         },
         {
-          elementType: "labels.text.stroke",
+          elementType: 'labels.text.stroke',
           stylers: [
             {
-              color: "#1a3646"
+              color: '#1a3646'
             }
           ]
         },
         {
-          featureType: "administrative.country",
-          elementType: "geometry.stroke",
+          featureType: 'administrative.country',
+          elementType: 'geometry.stroke',
           stylers: [
             {
-              color: "#4b6878"
+              color: '#4b6878'
             }
           ]
         },
         {
-          featureType: "administrative.land_parcel",
-          elementType: "labels.text.fill",
+          featureType: 'administrative.land_parcel',
+          elementType: 'labels.text.fill',
           stylers: [
             {
-              color: "#64779e"
+              color: '#64779e'
             }
           ]
         },
         {
-          featureType: "administrative.province",
-          elementType: "geometry.stroke",
+          featureType: 'administrative.province',
+          elementType: 'geometry.stroke',
           stylers: [
             {
-              color: "#4b6878"
+              color: '#4b6878'
             }
           ]
         },
         {
-          featureType: "landscape.man_made",
-          elementType: "geometry.stroke",
+          featureType: 'landscape.man_made',
+          elementType: 'geometry.stroke',
           stylers: [
             {
-              color: "#334e87"
+              color: '#334e87'
             }
           ]
         },
         {
-          featureType: "landscape.natural",
-          elementType: "geometry",
+          featureType: 'landscape.natural',
+          elementType: 'geometry',
           stylers: [
             {
-              color: "#023e58"
+              color: '#023e58'
             }
           ]
         },
         {
-          featureType: "poi",
-          elementType: "geometry",
+          featureType: 'poi',
+          elementType: 'geometry',
           stylers: [
             {
-              color: "#283d6a"
+              color: '#283d6a'
             }
           ]
         },
         {
-          featureType: "poi",
-          elementType: "labels.text.fill",
+          featureType: 'poi',
+          elementType: 'labels.text.fill',
           stylers: [
             {
-              color: "#6f9ba5"
+              color: '#6f9ba5'
             }
           ]
         },
         {
-          featureType: "poi",
-          elementType: "labels.text.stroke",
+          featureType: 'poi',
+          elementType: 'labels.text.stroke',
           stylers: [
             {
-              color: "#1d2c4d"
+              color: '#1d2c4d'
             }
           ]
         },
         {
-          featureType: "poi.park",
-          elementType: "geometry.fill",
+          featureType: 'poi.park',
+          elementType: 'geometry.fill',
           stylers: [
             {
-              color: "#023e58"
+              color: '#023e58'
             }
           ]
         },
         {
-          featureType: "poi.park",
-          elementType: "labels.text.fill",
+          featureType: 'poi.park',
+          elementType: 'labels.text.fill',
           stylers: [
             {
-              color: "#3C7680"
+              color: '#3C7680'
             }
           ]
         },
         {
-          featureType: "road",
-          elementType: "geometry",
+          featureType: 'road',
+          elementType: 'geometry',
           stylers: [
             {
-              color: "#304a7d"
+              color: '#304a7d'
             }
           ]
         },
         {
-          featureType: "road",
-          elementType: "labels.text.fill",
+          featureType: 'road',
+          elementType: 'labels.text.fill',
           stylers: [
             {
-              color: "#98a5be"
+              color: '#98a5be'
             }
           ]
         },
         {
-          featureType: "road",
-          elementType: "labels.text.stroke",
+          featureType: 'road',
+          elementType: 'labels.text.stroke',
           stylers: [
             {
-              color: "#1d2c4d"
+              color: '#1d2c4d'
             }
           ]
         },
         {
-          featureType: "road.highway",
-          elementType: "geometry",
+          featureType: 'road.highway',
+          elementType: 'geometry',
           stylers: [
             {
-              color: "#2c6675"
+              color: '#2c6675'
             }
           ]
         },
         {
-          featureType: "road.highway",
-          elementType: "geometry.fill",
+          featureType: 'road.highway',
+          elementType: 'geometry.fill',
           stylers: [
             {
-              color: "#9d2a80"
+              color: '#9d2a80'
             }
           ]
         },
         {
-          featureType: "road.highway",
-          elementType: "geometry.stroke",
+          featureType: 'road.highway',
+          elementType: 'geometry.stroke',
           stylers: [
             {
-              color: "#9d2a80"
+              color: '#9d2a80'
             }
           ]
         },
         {
-          featureType: "road.highway",
-          elementType: "labels.text.fill",
+          featureType: 'road.highway',
+          elementType: 'labels.text.fill',
           stylers: [
             {
-              color: "#b0d5ce"
+              color: '#b0d5ce'
             }
           ]
         },
         {
-          featureType: "road.highway",
-          elementType: "labels.text.stroke",
+          featureType: 'road.highway',
+          elementType: 'labels.text.stroke',
           stylers: [
             {
-              color: "#023e58"
+              color: '#023e58'
             }
           ]
         },
         {
-          featureType: "transit",
-          elementType: "labels.text.fill",
+          featureType: 'transit',
+          elementType: 'labels.text.fill',
           stylers: [
             {
-              color: "#98a5be"
+              color: '#98a5be'
             }
           ]
         },
         {
-          featureType: "transit",
-          elementType: "labels.text.stroke",
+          featureType: 'transit',
+          elementType: 'labels.text.stroke',
           stylers: [
             {
-              color: "#1d2c4d"
+              color: '#1d2c4d'
             }
           ]
         },
         {
-          featureType: "transit.line",
-          elementType: "geometry.fill",
+          featureType: 'transit.line',
+          elementType: 'geometry.fill',
           stylers: [
             {
-              color: "#283d6a"
+              color: '#283d6a'
             }
           ]
         },
         {
-          featureType: "transit.station",
-          elementType: "geometry",
+          featureType: 'transit.station',
+          elementType: 'geometry',
           stylers: [
             {
-              color: "#3a4762"
+              color: '#3a4762'
             }
           ]
         },
         {
-          featureType: "water",
-          elementType: "geometry",
+          featureType: 'water',
+          elementType: 'geometry',
           stylers: [
             {
-              color: "#0e1626"
+              color: '#0e1626'
             }
           ]
         },
         {
-          featureType: "water",
-          elementType: "labels.text.fill",
+          featureType: 'water',
+          elementType: 'labels.text.fill',
           stylers: [
             {
-              color: "#4e6d70"
+              color: '#4e6d70'
             }
           ]
         }
       ]
     };
 
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    const map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    var marker = new google.maps.Marker({
+    const marker = new google.maps.Marker({
       position: myLatlng,
-      title: "Hello World!"
+      title: 'Hello World!'
     });
 
     // To add the marker to the map, call setMap();
     marker.setMap(map);
   }
   ngOnDestroy() {
-    var body = document.getElementsByTagName("body")[0];
-    body.classList.remove("full-screen-map");
-    var navbar = document.getElementsByClassName("navbar")[0];
-    navbar.classList.add("navbar-transparent");
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.remove('full-screen-map');
+    const navbar = document.getElementsByClassName('navbar')[0];
+    navbar.classList.add('navbar-transparent');
   }
 }

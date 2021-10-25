@@ -1,13 +1,13 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { WidgetsComponent } from "./widgets.component";
+import { WidgetsComponent } from './widgets.component';
 
 export const WidgetsRoutes: Routes = [
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "",
+        path: '',
         component: WidgetsComponent
       }
     ]

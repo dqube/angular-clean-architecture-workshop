@@ -1,10 +1,10 @@
-import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { CommonModule } from "@angular/common";
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
-import { ChartsComponent } from "./charts.component";
+import { ChartsComponent } from './charts.component';
 
-import { ChartsRoutes } from "./charts.routing";
+import { ChartsRoutes } from './charts.routing';
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(ChartsRoutes)],

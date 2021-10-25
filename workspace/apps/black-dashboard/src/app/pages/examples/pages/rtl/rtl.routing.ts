@@ -1,13 +1,13 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { RtlComponent } from "./rtl.component";
+import { RtlComponent } from './rtl.component';
 
 export const RtlRoutes: Routes = [
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "rtl",
+        path: 'rtl',
         component: RtlComponent
       }
     ]

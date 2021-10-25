@@ -1,28 +1,28 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { RegisterComponent } from "./register/register.component";
-import { PricingComponent } from "./pricing/pricing.component";
-import { LockComponent } from "./lock/lock.component";
-import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from './register/register.component';
+import { PricingComponent } from './pricing/pricing.component';
+import { LockComponent } from './lock/lock.component';
+import { LoginComponent } from './login/login.component';
 
 export const PagesRoutes: Routes = [
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "login",
+        path: 'login',
         component: LoginComponent
       },
       {
-        path: "lock",
+        path: 'lock',
         component: LockComponent
       },
       {
-        path: "register",
+        path: 'register',
         component: RegisterComponent
       },
       {
-        path: "pricing",
+        path: 'pricing',
         component: PricingComponent
       }
     ]

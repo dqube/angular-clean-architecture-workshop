@@ -1,12 +1,12 @@
-import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { CommonModule } from "@angular/common";
-import { FormsModule } from "@angular/forms";
-import { JwBootstrapSwitchNg2Module } from "jw-bootstrap-switch-ng2";
-import { BsDropdownModule } from "ngx-bootstrap/dropdown";
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
-import { WidgetsComponent } from "./widgets.component";
-import { WidgetsRoutes } from "./widgets.routing";
+import { WidgetsComponent } from './widgets.component';
+import { WidgetsRoutes } from './widgets.routing';
 
 @NgModule({
   imports: [

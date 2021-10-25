@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VectorMapComponent } from "./vector-map.component";
+import { VectorMapComponent } from './vector-map.component';
 
-describe("VectorMapComponent", () => {
+describe('VectorMapComponent', () => {
   let component: VectorMapComponent;
   let fixture: ComponentFixture<VectorMapComponent>;
 
@@ -18,7 +18,7 @@ describe("VectorMapComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

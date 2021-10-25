@@ -1,8 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-rtl",
-  templateUrl: "rtl.component.html"
+  selector: 'app-rtl',
+  templateUrl: 'rtl.component.html'
 })
 export class RtlComponent implements OnInit {
   switch = true;

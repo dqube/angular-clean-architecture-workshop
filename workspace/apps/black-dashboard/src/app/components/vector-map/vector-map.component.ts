@@ -1,12 +1,12 @@
-import { Component, OnInit } from "@angular/core";
-import * as mapsData from "devextreme/dist/js/vectormap-data/world.js";
-import { Countries, Service } from "./vector-map.service";
+import { Component, OnInit } from '@angular/core';
+import * as mapsData from 'devextreme/dist/js/vectormap-data/world.js';
+import { Countries, Service } from './vector-map.service';
 
 @Component({
-  selector: "app-vector-map-component",
-  templateUrl: "./vector-map.component.html",
+  selector: 'app-vector-map-component',
+  templateUrl: './vector-map.component.html',
   providers: [Service],
-  styleUrls: ["./vector-map.component.css"]
+  styleUrls: ['./vector-map.component.css']
 })
 export class VectorMapComponent1 {
   worldMap: any = mapsData.world;
@@ -19,17 +19,17 @@ export class VectorMapComponent1 {
     this.click = this.click.bind(this);
   }
   customizeTooltip(arg) {
-    let name = arg.attribute("name");
+    const name = arg.attribute('name');
     return {
       text: name,
-      color: "#FFFFFF",
-      fontColor: "#000"
+      color: '#FFFFFF',
+      fontColor: '#000'
     };
   }
 
   customizeLayers(elements) {
     elements.forEach(element => {
-      let country = this.countries[element.attribute("name")];
+      const country = this.countries[element.attribute('name')];
       if (country) {
         element.applySettings({
           color: country.color,
@@ -38,17 +38,17 @@ export class VectorMapComponent1 {
         });
       } else {
         element.applySettings({
-          color: "#e4e4e4",
-          hoveredColor: "#e4e4e4",
-          selectedColor: "#e4e4e4"
+          color: '#e4e4e4',
+          hoveredColor: '#e4e4e4',
+          selectedColor: '#e4e4e4'
         });
       }
     });
   }
 
   click(e) {
-    let target = e.target;
-    if (target && this.countries[target.attribute("name")]) {
+    const target = e.target;
+    if (target && this.countries[target.attribute('name')]) {
       target.selected(!target.selected());
     }
   }

@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { MustMatch } from "./password-validator.component";
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MustMatch } from './password-validator.component';
 
 @Component({
-  selector: "app-validation",
-  templateUrl: "validation.component.html"
+  selector: 'app-validation',
+  templateUrl: 'validation.component.html'
 })
 export class ValidationComponent implements OnInit {
   public registerForm: FormGroup;
@@ -41,26 +41,26 @@ export class ValidationComponent implements OnInit {
   ngOnInit() {
     this.registerForm = this.formBuilder.group(
       {
-        email: ["", [Validators.required, Validators.email]],
-        password: ["", [Validators.required, Validators.minLength(6)]],
-        confirmPassword: ["", Validators.required]
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(6)]],
+        confirmPassword: ['', Validators.required]
       },
       {
-        validator: MustMatch("password", "confirmPassword")
+        validator: MustMatch('password', 'confirmPassword')
       }
     );
     this.loginForm = this.formBuilder.group({
-      fullName: ["", Validators.required],
-      email: ["", [Validators.required, Validators.email]],
-      password: ["", [Validators.required, Validators.minLength(6)]]
+      fullName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
     });
     this.typeForm = this.formBuilder.group(
       {
-        requiredText: ["", [Validators.required, Validators.minLength(2)]],
-        email: ["", [Validators.required, Validators.email]],
-        number: ["", [Validators.required, Validators.pattern("^-?[0-9]+$")]],
+        requiredText: ['', [Validators.required, Validators.minLength(2)]],
+        email: ['', [Validators.required, Validators.email]],
+        number: ['', [Validators.required, Validators.pattern('^-?[0-9]+$')]],
         url: [
-          "",
+          '',
           [
             Validators.required,
             Validators.pattern(
@@ -68,39 +68,39 @@ export class ValidationComponent implements OnInit {
             )
           ]
         ],
-        idSource: ["", [Validators.required, Validators.minLength(2)]],
-        idDestination: ["", Validators.required]
+        idSource: ['', [Validators.required, Validators.minLength(2)]],
+        idDestination: ['', Validators.required]
       },
       {
-        validator: MustMatch("idSource", "idDestination")
+        validator: MustMatch('idSource', 'idDestination')
       }
     );
     this.rangeForm = this.formBuilder.group({
-      minLength: ["", [Validators.required, Validators.minLength(5)]],
-      maxLength: ["", [Validators.required, Validators.maxLength(5)]],
+      minLength: ['', [Validators.required, Validators.minLength(5)]],
+      maxLength: ['', [Validators.required, Validators.maxLength(5)]],
       rangeD: [
-        "",
+        '',
         [
           Validators.required,
           Validators.min(6),
           Validators.max(10),
-          Validators.pattern("^-?[0-9]+$")
+          Validators.pattern('^-?[0-9]+$')
         ]
       ],
       minValue: [
-        "",
+        '',
         [
           Validators.required,
           Validators.min(6),
-          Validators.pattern("^-?[0-9]+$")
+          Validators.pattern('^-?[0-9]+$')
         ]
       ],
       maxValue: [
-        "",
+        '',
         [
           Validators.required,
           Validators.max(6),
-          Validators.pattern("^-?[0-9]+$")
+          Validators.pattern('^-?[0-9]+$')
         ]
       ]
     });
@@ -117,7 +117,7 @@ export class ValidationComponent implements OnInit {
       return;
     }
 
-    alert("SUCCESS!! :-)\n\n" + JSON.stringify(this.registerForm.value));
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value));
   }
   // Login form functions
   get loginF() {
@@ -132,7 +132,7 @@ export class ValidationComponent implements OnInit {
       return;
     }
 
-    alert("SUCCESS!! :-)\n\n" + JSON.stringify(this.loginForm.value));
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.loginForm.value));
   }
 
   // Type form functions
@@ -148,7 +148,7 @@ export class ValidationComponent implements OnInit {
       return;
     }
 
-    alert("SUCCESS!! :-)\n\n" + JSON.stringify(this.typeForm.value));
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.typeForm.value));
   }
 
   // Range form functions
@@ -164,6 +164,6 @@ export class ValidationComponent implements OnInit {
       return;
     }
 
-    alert("SUCCESS!! :-)\n\n" + JSON.stringify(this.rangeForm.value));
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.rangeForm.value));
   }
 }

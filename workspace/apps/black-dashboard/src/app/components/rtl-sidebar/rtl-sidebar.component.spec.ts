@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RtlSidebarComponent } from "./rtl-sidebar.component";
+import { RtlSidebarComponent } from './rtl-sidebar.component';
 
-describe("RtlSidebarComponent", () => {
+describe('RtlSidebarComponent', () => {
   let component: RtlSidebarComponent;
   let fixture: ComponentFixture<RtlSidebarComponent>;
 
@@ -18,7 +18,7 @@ describe("RtlSidebarComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

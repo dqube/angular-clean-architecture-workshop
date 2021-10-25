@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RtlLayoutComponent } from "./rtl-layout.component";
+import { RtlLayoutComponent } from './rtl-layout.component';
 
-describe("RtlLayoutComponent", () => {
+describe('RtlLayoutComponent', () => {
   let component: RtlLayoutComponent;
   let fixture: ComponentFixture<RtlLayoutComponent>;
 
@@ -18,7 +18,7 @@ describe("RtlLayoutComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,33 +1,33 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { RegularComponent } from "./regular/regular.component";
-import { ExtendedComponent } from "./extended/extended.component";
-import { NgxDatatablesComponent } from "./ngxdatatables/ngxdatatables.component";
+import { RegularComponent } from './regular/regular.component';
+import { ExtendedComponent } from './extended/extended.component';
+import { NgxDatatablesComponent } from './ngxdatatables/ngxdatatables.component';
 
 export const TablesRoutes: Routes = [
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "regular",
+        path: 'regular',
         component: RegularComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "extended",
+        path: 'extended',
         component: ExtendedComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "ngx-datatable",
+        path: 'ngx-datatable',
         component: NgxDatatablesComponent
       }
     ]

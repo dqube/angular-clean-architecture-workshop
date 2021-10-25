@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RtlNavbarComponent } from "./rtl-navbar.component";
+import { RtlNavbarComponent } from './rtl-navbar.component';
 
-describe("RtlNavbarComponent", () => {
+describe('RtlNavbarComponent', () => {
   let component: RtlNavbarComponent;
   let fixture: ComponentFixture<RtlNavbarComponent>;
 
@@ -18,7 +18,7 @@ describe("RtlNavbarComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

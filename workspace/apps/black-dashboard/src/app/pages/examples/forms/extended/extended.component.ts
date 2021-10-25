@@ -1,25 +1,25 @@
-import { Component, OnInit } from "@angular/core";
-import noUiSlider from "nouislider";
+import { Component, OnInit } from '@angular/core';
+import noUiSlider from 'nouislider';
 
 @Component({
-  selector: "app-extended",
-  templateUrl: "extended.component.html"
+  selector: 'app-extended',
+  templateUrl: 'extended.component.html'
 })
 export class ExtendedComponent implements OnInit {
   mytime: Date = new Date();
-  tags = ["Amsterdam", "Washington", "Sydney", "Beijing"];
+  tags = ['Amsterdam', 'Washington', 'Sydney', 'Beijing'];
   date: Date = new Date();
   switch = true;
   switch1 = true;
   switch2 = true;
-  iconOff: string = '<i class="tim-icons icon-simple-remove"></i>';
-  iconOn: string = '<i class="tim-icons icon-check-2"></i>';
+  iconOff = '<i class="tim-icons icon-simple-remove"></i>';
+  iconOn = '<i class="tim-icons icon-check-2"></i>';
 
   isDropup = true;
   constructor() {}
 
   ngOnInit() {
-    var slider = document.getElementById("sliderRegular");
+    const slider = document.getElementById('sliderRegular');
 
     noUiSlider.create(slider, {
       start: 40,
@@ -30,7 +30,7 @@ export class ExtendedComponent implements OnInit {
       }
     });
 
-    var slider2 = document.getElementById("sliderDouble");
+    const slider2 = document.getElementById('sliderDouble');
 
     noUiSlider.create(slider2, {
       start: [20, 60],

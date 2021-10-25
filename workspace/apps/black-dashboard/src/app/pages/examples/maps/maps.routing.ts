@@ -1,33 +1,33 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { GoogleComponent } from "./google/google.component";
-import { FullscreenComponent } from "./fullscreen/fullscreen.component";
-import { VectorComponent } from "./vector/vector.component";
+import { GoogleComponent } from './google/google.component';
+import { FullscreenComponent } from './fullscreen/fullscreen.component';
+import { VectorComponent } from './vector/vector.component';
 
 export const MapsRoutes: Routes = [
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "full-screen",
+        path: 'full-screen',
         component: FullscreenComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "google",
+        path: 'google',
         component: GoogleComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "vector",
+        path: 'vector',
         component: VectorComponent
       }
     ]

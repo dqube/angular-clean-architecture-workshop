@@ -1,43 +1,43 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { RegularComponent } from "./regular/regular.component";
-import { ExtendedComponent } from "./extended/extended.component";
-import { ValidationComponent } from "./validation/validation.component";
-import { WizardComponent } from "./wizard/wizard.component";
+import { RegularComponent } from './regular/regular.component';
+import { ExtendedComponent } from './extended/extended.component';
+import { ValidationComponent } from './validation/validation.component';
+import { WizardComponent } from './wizard/wizard.component';
 
 export const FormsRoutes: Routes = [
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "regular",
+        path: 'regular',
         component: RegularComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "extended",
+        path: 'extended',
         component: ExtendedComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "validation",
+        path: 'validation',
         component: ValidationComponent
       }
     ]
   },
   {
-    path: "",
+    path: '',
     children: [
       {
-        path: "wizard",
+        path: 'wizard',
         component: WizardComponent
       }
     ]
