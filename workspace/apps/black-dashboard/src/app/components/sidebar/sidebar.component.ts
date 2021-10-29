@@ -34,7 +34,7 @@ export interface ChildrenItems2 {
 }
 
 //Menu Items
-export const ROUTES: RouteInfo[] = [
+export const ROUTES_ORIGINAL: RouteInfo[] = [
   {
     path: '/dashboard',
     title: 'Dashboard',
@@ -230,6 +230,16 @@ export const ROUTES: RouteInfo[] = [
         smallTitle: 'VM'
       }
     ]
+  }
+];
+
+export const ROUTES: RouteInfo[] = [
+  {
+    path: '/dashboard',
+    title: 'Dashboard',
+    type: 'link',
+    icontype: 'tim-icons icon-chart-pie-36',
+    rtlTitle: 'لوحة القيادة'
   }
 ];
 

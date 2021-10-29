@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { ComponentsModule } from '../../../components/components.module';
+import { ComponentsModule } from '../components/components.module';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutes } from './dashboard.routing';
 
@@ -21,4 +21,4 @@ import { DashboardRoutes } from './dashboard.routing';
   declarations: [DashboardComponent],
   exports: [DashboardComponent]
 })
-export class DashboardModule {}
+export class DashboardModule { }

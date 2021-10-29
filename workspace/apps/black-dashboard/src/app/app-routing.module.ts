@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+// import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 
 const routes: Routes = [
   {
@@ -18,24 +18,20 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./pages/examples/dashboard/dashboard.module').then((m) => m.DashboardModule)
-      },
-      {
-        path: 'components',
-        loadChildren: () => import('./pages/examples/components/components.module').then((m) => m.ComponentsPageModule)
+        loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
     ]
   },
-  {
-    path: '',
-    component: AuthLayoutComponent,
-    children: [
-      {
-        path: 'pages',
-        loadChildren: () => import('./pages/examples/pages/pages.module').then((m) => m.PagesModule)
-      }
-    ]
-  },
+  // {
+  //   path: '',
+  //   component: AuthLayoutComponent,
+  //   children: [
+  //     {
+  //       path: 'pages',
+  //       loadChildren: () => import('./pages/examples/pages/pages.module').then((m) => m.PagesModule)
+  //     }
+  //   ]
+  // },
   {
     path: '**',
     component: AdminLayoutComponent,
