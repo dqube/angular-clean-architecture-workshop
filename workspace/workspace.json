@@ -16,7 +16,11 @@
             "polyfills": "apps/black-dashboard/src/polyfills.ts",
             "tsConfig": "apps/black-dashboard/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/black-dashboard/src/favicon.ico", "apps/black-dashboard/src/assets"],
+            "assets": [
+              "apps/black-dashboard/src/favicon.ico",
+              "apps/black-dashboard/src/assets"
+              "apps/black-dashboard/src/assets"
+            ],
             "styles": [
               "apps/black-dashboard/src/styles.scss",
               "apps/black-dashboard/src/assets/css/nucleo-icons.css",
@@ -139,5 +143,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "dashboard"
+  "defaultProject": "black-dashboard"
 }

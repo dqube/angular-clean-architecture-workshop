@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FixedPluginComponent } from './fixed-plugin.component';
 
-describe('FixedPluginComponent', () => {
+describe.skip('FixedPluginComponent', () => {
   let component: FixedPluginComponent;
   let fixture: ComponentFixture<FixedPluginComponent>;
 

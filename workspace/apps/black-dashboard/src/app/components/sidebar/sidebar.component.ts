@@ -23,6 +23,7 @@ export interface ChildrenItems {
   children?: ChildrenItems2[];
   isCollapsed?: boolean;
 }
+
 export interface ChildrenItems2 {
   path?: string;
   smallTitle?: string;
@@ -31,6 +32,7 @@ export interface ChildrenItems2 {
   rtlTitle: string;
   type?: string;
 }
+
 //Menu Items
 export const ROUTES: RouteInfo[] = [
   {
@@ -195,84 +197,6 @@ export const ROUTES: RouteInfo[] = [
     ]
   },
   {
-    path: '/forms',
-    title: 'Forms',
-    type: 'sub',
-    icontype: 'tim-icons icon-notes',
-    collapse: 'forms',
-    isCollapsed: true,
-    rtlTitle: '  إستمارات',
-    children: [
-      {
-        path: 'regular',
-        rtlTitle: ' أشكال منتظمة',
-        rtlSmallTitle: 'ص ',
-        title: 'Regular Forms',
-        type: 'link',
-        smallTitle: 'RF'
-      },
-      {
-        path: 'extended',
-        rtlTitle: ' أشكال موسعة',
-        rtlSmallTitle: ' هوو',
-        title: 'Extended Forms',
-        type: 'link',
-        smallTitle: 'EF'
-      },
-      {
-        path: 'validation',
-        rtlTitle: ' نماذج التحقق',
-        rtlSmallTitle: ' ت',
-        title: 'Validation Forms',
-        type: 'link',
-        smallTitle: 'VF'
-      },
-      {
-        path: 'wizard',
-        rtlTitle: ' ساحر ',
-        rtlSmallTitle: ' ث',
-        title: 'Wizard',
-        type: 'link',
-        smallTitle: 'W'
-      }
-    ]
-  },
-  {
-    path: '/tables',
-    title: 'Tables',
-    type: 'sub',
-    icontype: 'tim-icons icon-puzzle-10',
-    collapse: 'tables',
-    rtlTitle: '  الجداول',
-    isCollapsed: true,
-    children: [
-      {
-        path: 'regular',
-        rtlTitle: 'الجداول العادية',
-        rtlSmallTitle: ' ص',
-        title: 'Regular Tables',
-        type: 'link',
-        smallTitle: 'RT'
-      },
-      {
-        path: 'extended',
-        rtlTitle: 'الجداول الموسع',
-        rtlSmallTitle: ' هور',
-        title: 'Extended Tables',
-        type: 'link',
-        smallTitle: 'ET'
-      },
-      {
-        path: 'ngx-datatable',
-        rtlTitle: 'جداول البيانات',
-        rtlSmallTitle: 'الثانية ',
-        title: 'Ngx Datatable',
-        type: 'link',
-        smallTitle: 'ND'
-      }
-    ]
-  },
-  {
     path: '/maps',
     title: 'Maps',
     type: 'sub',
@@ -306,27 +230,6 @@ export const ROUTES: RouteInfo[] = [
         smallTitle: 'VM'
       }
     ]
-  },
-  {
-    path: '/widgets',
-    title: 'Widgets',
-    type: 'link',
-    rtlTitle: 'الحاجيات',
-    icontype: 'tim-icons icon-settings'
-  },
-  {
-    path: '/charts',
-    title: 'Charts',
-    type: 'link',
-    rtlTitle: 'الرسوم البيانية',
-    icontype: 'tim-icons icon-chart-bar-32'
-  },
-  {
-    path: '/calendar',
-    title: 'Calendar',
-    rtlTitle: 'التقويم',
-    type: 'link',
-    icontype: 'tim-icons icon-time-alarm'
   }
 ];
 

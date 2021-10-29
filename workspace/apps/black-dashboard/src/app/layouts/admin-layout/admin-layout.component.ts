@@ -13,7 +13,9 @@ const misc: any = {
   styleUrls: ['./admin-layout.component.scss']
 })
 export class AdminLayoutComponent implements OnInit {
-  constructor(public router: Router, public toastr: ToastrService) {}
+  constructor(public router: Router, public toastr: ToastrService) {
+    console.log(`Loading[AdminLayoutComponent]...`);
+  }
   @HostListener('window:scroll', ['$event'])
   showNavbarButton = () => {
     const mainPanel: any = document.getElementsByClassName('main-panel')[0];
@@ -52,6 +54,7 @@ export class AdminLayoutComponent implements OnInit {
     }
     this.showNavbarButton();
   }
+
   minimizeSidebar() {
     const body = document.getElementsByTagName('body')[0];
     if (body.classList.contains('sidebar-mini')) {
@@ -79,6 +82,7 @@ export class AdminLayoutComponent implements OnInit {
       clearInterval(simulateWindowResize);
     }, 1000);
   }
+
   showSidebarMessage(message) {
     this.toastr.show(
       '<span data-notify="icon" class="tim-icons icon-bell-55"></span>',

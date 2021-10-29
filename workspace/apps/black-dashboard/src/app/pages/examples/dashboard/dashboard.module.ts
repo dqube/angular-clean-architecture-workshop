@@ -1,14 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
-// import { ChartsModule } from "ng2-charts";
-import { ComponentsModule } from '../../../components/components.module';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ComponentsModule } from '../../../components/components.module';
+import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutes } from './dashboard.routing';
 
-import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
   imports: [

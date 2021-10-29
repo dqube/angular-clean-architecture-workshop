@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { AuthLayoutComponent } from './auth-layout.component';
 
-describe('AuthLayoutComponent', () => {
+describe.skip('AuthLayoutComponent', () => {
   let component: AuthLayoutComponent;
   let fixture: ComponentFixture<AuthLayoutComponent>;
 

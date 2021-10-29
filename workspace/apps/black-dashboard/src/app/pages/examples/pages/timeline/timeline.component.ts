@@ -1,11 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'buildmotion-timeline',
   templateUrl: 'timeline.component.html'
 })
-export class TimelineComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class TimelineComponent {
 }
