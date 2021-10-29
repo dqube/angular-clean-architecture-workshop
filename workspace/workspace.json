@@ -19,7 +19,6 @@
             "assets": [
               "apps/black-dashboard/src/favicon.ico",
               "apps/black-dashboard/src/assets"
-              "apps/black-dashboard/src/assets"
             ],
             "styles": [
               "apps/black-dashboard/src/styles.scss",

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -6,7 +6,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './fixed-plugin.component.html',
   styleUrls: ['./fixed-plugin.component.scss']
 })
-export class FixedPluginComponent implements OnInit {
+export class FixedPluginComponent {
   public sidebarColor = 'red';
   public state = true;
   public dashboardColor = true;
@@ -32,7 +32,7 @@ export class FixedPluginComponent implements OnInit {
       body.classList.remove('white-content');
     }
   }
-  ngOnInit() {}
+
   onChangeDashboardColor(event) {
     const body = document.getElementsByTagName('body')[0];
     if (this.dashboardColor === true) {

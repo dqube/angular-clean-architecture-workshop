@@ -12,7 +12,7 @@ import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { VectorMapComponent1 } from './vector-map/vector-map.component';
+import { VectorMapComponent } from './vector-map/vector-map.component';
 import { PictureUploadComponent } from './picture-upload/picture-upload.component';
 import { AuthNavbarComponent } from './auth-navbar/auth-navbar.component';
 import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
@@ -31,7 +31,7 @@ import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
   ],
   declarations: [
     FooterComponent,
-    VectorMapComponent1,
+    VectorMapComponent,
     NavbarComponent,
     SidebarComponent,
     PictureUploadComponent,
@@ -40,7 +40,7 @@ import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
   ],
   exports: [
     FooterComponent,
-    VectorMapComponent1,
+    VectorMapComponent,
     NavbarComponent,
     SidebarComponent,
     PictureUploadComponent,

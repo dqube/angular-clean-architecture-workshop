@@ -8,7 +8,7 @@ import { Countries, Service } from './vector-map.service';
   providers: [Service],
   styleUrls: ['./vector-map.component.css']
 })
-export class VectorMapComponent1 {
+export class VectorMapComponent {
   worldMap: any = mapsData.world;
   countries: Countries;
 
