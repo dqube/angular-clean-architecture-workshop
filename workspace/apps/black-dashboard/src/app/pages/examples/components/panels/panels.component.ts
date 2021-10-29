@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-panels',
+  selector: 'buildmotion-panels',
   templateUrl: 'panels.component.html'
 })
 export class PanelsComponent implements OnInit {

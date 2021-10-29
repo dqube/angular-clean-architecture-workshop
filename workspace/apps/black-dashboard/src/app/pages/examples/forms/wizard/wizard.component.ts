@@ -3,7 +3,7 @@ import Stepper from 'bs-stepper';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-wizard',
+  selector: 'buildmotion-wizard',
   templateUrl: 'wizard.component.html'
 })
 export class WizardComponent implements OnInit {

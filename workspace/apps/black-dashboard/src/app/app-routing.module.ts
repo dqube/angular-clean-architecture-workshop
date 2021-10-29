@@ -5,7 +5,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-import { RtlLayoutComponent } from './layouts/rtl-layout/rtl-layout.component';
 
 const routes: Routes = [
   {
@@ -67,16 +66,6 @@ const routes: Routes = [
       {
         path: 'pages',
         loadChildren: () => import('./pages/examples/pages/pages.module').then((m) => m.PagesModule)
-      }
-    ]
-  },
-  {
-    path: '',
-    component: RtlLayoutComponent,
-    children: [
-      {
-        path: 'pages',
-        loadChildren: () => import('./pages/examples/pages/rtl/rtl.module').then((m) => m.RtlModule)
       }
     ]
   },

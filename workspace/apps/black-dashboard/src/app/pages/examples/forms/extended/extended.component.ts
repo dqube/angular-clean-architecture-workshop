@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import noUiSlider from 'nouislider';
 
 @Component({
-  selector: 'app-extended',
+  selector: 'buildmotion-extended',
   templateUrl: 'extended.component.html'
 })
 export class ExtendedComponent implements OnInit {

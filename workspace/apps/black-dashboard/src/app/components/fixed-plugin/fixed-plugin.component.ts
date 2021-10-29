@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-fixed-plugin',
+  selector: 'buildmotion-fixed-plugin',
   templateUrl: './fixed-plugin.component.html',
   styleUrls: ['./fixed-plugin.component.scss']
 })

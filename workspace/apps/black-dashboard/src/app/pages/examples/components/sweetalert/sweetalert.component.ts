@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import swal from 'sweetalert2';
 @Component({
-  selector: 'app-sweetalert',
+  selector: 'buildmotion-sweetalert',
   templateUrl: 'sweetalert.component.html'
 })
 export class SweetalertComponent implements OnInit {

@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MustMatch } from './password-validator.component';
 
 @Component({
-  selector: 'app-validation',
+  selector: 'buildmotion-validation',
   templateUrl: 'validation.component.html'
 })
 export class ValidationComponent implements OnInit {

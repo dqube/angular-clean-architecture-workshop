@@ -8,7 +8,7 @@ const misc: any = {
 };
 
 @Component({
-  selector: 'app-admin-layout',
+  selector: 'buildmotion-admin-layout',
   templateUrl: './admin-layout.component.html',
   styleUrls: ['./admin-layout.component.scss']
 })

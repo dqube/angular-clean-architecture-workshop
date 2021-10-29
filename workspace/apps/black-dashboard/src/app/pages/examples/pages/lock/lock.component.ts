@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-lock',
+  selector: 'buildmotion-lock',
   templateUrl: 'lock.component.html'
 })
 export class LockComponent implements OnInit, OnDestroy {

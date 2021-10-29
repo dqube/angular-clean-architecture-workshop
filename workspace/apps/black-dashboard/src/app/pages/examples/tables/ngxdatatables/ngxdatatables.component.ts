@@ -7,7 +7,7 @@ export enum SelectionType {
   checkbox = 'checkbox'
 }
 @Component({
-  selector: 'app-ngxdatatables',
+  selector: 'buildmotion-ngxdatatables',
   templateUrl: 'ngxdatatables.component.html'
 })
 export class NgxDatatablesComponent implements OnInit {

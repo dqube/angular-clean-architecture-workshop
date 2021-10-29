@@ -7,7 +7,7 @@ const misc: any = {
   sidebar_mini_active: true
 };
 @Component({
-  selector: 'app-auth-navbar',
+  selector: 'buildmotion-auth-navbar',
   templateUrl: './auth-navbar.component.html',
   styleUrls: ['./auth-navbar.component.scss']
 })

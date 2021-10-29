@@ -15,8 +15,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { VectorMapComponent1 } from './vector-map/vector-map.component';
 import { PictureUploadComponent } from './picture-upload/picture-upload.component';
 import { AuthNavbarComponent } from './auth-navbar/auth-navbar.component';
-import { RtlNavbarComponent } from './rtl-navbar/rtl-navbar.component';
-import { RtlSidebarComponent } from './rtl-sidebar/rtl-sidebar.component';
 import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
 
 @NgModule({
@@ -38,8 +36,6 @@ import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
     SidebarComponent,
     PictureUploadComponent,
     AuthNavbarComponent,
-    RtlNavbarComponent,
-    RtlSidebarComponent,
     FixedPluginComponent
   ],
   exports: [
@@ -49,8 +45,6 @@ import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
     SidebarComponent,
     PictureUploadComponent,
     AuthNavbarComponent,
-    RtlNavbarComponent,
-    RtlSidebarComponent,
     FixedPluginComponent
   ]
 })

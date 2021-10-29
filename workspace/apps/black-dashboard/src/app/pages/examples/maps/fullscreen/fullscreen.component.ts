@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 declare const google: any;
 
 @Component({
-  selector: 'app-fullscreen',
+  selector: 'buildmotion-fullscreen',
   templateUrl: 'fullscreen.component.html'
 })
 export class FullscreenComponent implements OnInit, OnDestroy {

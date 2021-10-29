@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-auth-layout',
+  selector: 'buildmotion-auth-layout',
   templateUrl: './auth-layout.component.html',
   styleUrls: ['./auth-layout.component.scss']
 })

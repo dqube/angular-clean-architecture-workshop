@@ -119,7 +119,7 @@ The original template contains several layout options and widgets.
  - footer
  - left navigation
 
-![tempalte-shell](resources/setup/template-shell.png)
+![template-shell](resources/setup/template-shell.png)
 
 
 ### Styles

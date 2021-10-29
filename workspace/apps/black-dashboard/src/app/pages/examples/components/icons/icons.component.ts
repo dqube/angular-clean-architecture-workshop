@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-icons',
+  selector: 'buildmotion-icons',
   templateUrl: 'icons.component.html'
 })
 export class IconsComponent implements OnInit {

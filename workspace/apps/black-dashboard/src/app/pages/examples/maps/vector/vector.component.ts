@@ -4,7 +4,7 @@ import * as mapsData from 'devextreme/dist/js/vectormap-data/world.js';
 import { Countries, Service } from './vector-map.service';
 
 @Component({
-  selector: 'app-vector',
+  selector: 'buildmotion-vector',
   providers: [Service],
   templateUrl: 'vector.component.html'
 })

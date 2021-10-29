@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-grid',
+  selector: 'buildmotion-grid',
   templateUrl: 'grid.component.html'
 })
 export class GridComponent implements OnInit {

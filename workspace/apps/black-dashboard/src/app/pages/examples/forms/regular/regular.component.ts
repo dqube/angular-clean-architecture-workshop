@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-regular',
+  selector: 'buildmotion-regular',
   templateUrl: 'regular.component.html'
 })
 export class RegularComponent implements OnInit {

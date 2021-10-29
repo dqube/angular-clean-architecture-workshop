@@ -8,7 +8,7 @@ const misc: any = {
   sidebar_mini_active: true
 };
 @Component({
-  selector: 'app-navbar',
+  selector: 'buildmotion-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })

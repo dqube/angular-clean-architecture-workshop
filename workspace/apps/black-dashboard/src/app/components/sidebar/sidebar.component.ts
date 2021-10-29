@@ -331,7 +331,7 @@ export const ROUTES: RouteInfo[] = [
 ];
 
 @Component({
-  selector: 'app-sidebar',
+  selector: 'buildmotion-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })

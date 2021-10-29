@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-buttons',
+  selector: 'buildmotion-buttons',
   templateUrl: 'buttons.component.html'
 })
 export class ButtonsComponent implements OnInit {

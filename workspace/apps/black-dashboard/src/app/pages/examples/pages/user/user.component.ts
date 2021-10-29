@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-user',
+  selector: 'buildmotion-user',
   templateUrl: 'user.component.html'
 })
 export class UserComponent implements OnInit {

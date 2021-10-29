@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-rtl',
+  selector: 'buildmotion-rtl',
   templateUrl: 'rtl.component.html'
 })
 export class RtlComponent implements OnInit {

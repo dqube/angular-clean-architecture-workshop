@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-widgets',
+  selector: 'buildmotion-widgets',
   templateUrl: 'widgets.component.html'
 })
-export class WidgetsComponent implements OnInit {
+export class WidgetsComponent {
   switch = true;
-  constructor() {}
-
-  ngOnInit() {}
 }

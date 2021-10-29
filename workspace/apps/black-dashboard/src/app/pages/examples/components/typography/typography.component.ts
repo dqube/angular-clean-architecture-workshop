@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-typography',
+  selector: 'buildmotion-typography',
   templateUrl: 'typography.component.html'
 })
 export class TypographyComponent implements OnInit {

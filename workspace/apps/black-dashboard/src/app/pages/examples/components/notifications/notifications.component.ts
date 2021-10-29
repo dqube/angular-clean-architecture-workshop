@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-notifications',
+  selector: 'buildmotion-notifications',
   templateUrl: 'notifications.component.html'
 })
 export class NotificationsComponent {

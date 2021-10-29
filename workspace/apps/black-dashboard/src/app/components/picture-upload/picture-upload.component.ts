@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-picture-upload',
+  selector: 'buildmotion-picture-upload',
   templateUrl: './picture-upload.component.html',
   styleUrls: ['./picture-upload.component.css']
 })

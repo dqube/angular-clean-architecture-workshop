@@ -1,19 +1,21 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VectorMapComponent } from './vector-map.component';
+import { VectorMapComponent1 } from './vector-map.component';
 
-describe('VectorMapComponent', () => {
-  let component: VectorMapComponent;
-  let fixture: ComponentFixture<VectorMapComponent>;
+describe('VectorMapComponent1', () => {
+  let component: VectorMapComponent1;
+  let fixture: ComponentFixture<VectorMapComponent1>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [VectorMapComponent]
+      declarations: [VectorMapComponent1],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VectorMapComponent);
+    fixture = TestBed.createComponent(VectorMapComponent1);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

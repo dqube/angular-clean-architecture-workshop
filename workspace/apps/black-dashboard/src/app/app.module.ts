@@ -11,14 +11,12 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
-import { RtlLayoutComponent } from './layouts/rtl-layout/rtl-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
-    RtlLayoutComponent
   ],
   imports: [
     CommonModule,
