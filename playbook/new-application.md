@@ -96,6 +96,8 @@ nx generate @nrwl/angular:application dashboard --help
 
 ### Serve the New Application 
 
+> nx serve dashboard
+
 ![serve-new-app.png](resources/setup/serve-new-app.png)
 ## Angular Template
 
