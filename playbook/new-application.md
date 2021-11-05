@@ -10,7 +10,9 @@ yarn add @nrwl/angular@11.6.3 -D
 
 ## CLI Command
 
-Use the following command to create a new application in your workspace.
+> The Nx CLI Is a tool that contains a set of generators. Each generator or schematic contains templates that generate code, applications, services, or other things in the workspace. Use the generators to quickly scaffold your application and libraries for the workspace.
+
+Use the following command to create a new application project in your workspace.
 
  - The application name is *dashboard*.
 
@@ -62,7 +64,7 @@ UPDATE nx.json
 ```
 ### Available Options
 
-asd
+Each *template* has a specific set of options that can be applied when you run the command.
 
 ```ts
 nx generate @nrwl/angular:application dashboard --help
@@ -94,6 +96,8 @@ nx generate @nrwl/angular:application dashboard --help
 
 ### Serve the New Application 
 
+> nx serve dashboard
+
 ![serve-new-app.png](resources/setup/serve-new-app.png)
 ## Angular Template
 
@@ -117,4 +121,21 @@ The original template contains several layout options and widgets.
  - footer
  - left navigation
 
-![tempalte-shell](resources/setup/template-shell.png)
+![template-shell](resources/setup/template-shell.png)
+
+
+### Styles
+
+```json
+{
+  "glob": "**/*",
+  "input": "libs/shared/assets/src/assets",
+  "output": "assets"
+},
+              ```
+
+### Update JavaScript References
+
+```ts
+yarn add @popperjs/core@2.9.2
+```
