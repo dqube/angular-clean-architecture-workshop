@@ -12,6 +12,17 @@
   "tasksRunnerOptions": { "default": { "runner": "@nrwl/workspace/tasks-runners/default", "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] } } },
   "projects": {
     "black-dashboard": { "tags": [] },
-    "black-dashboard-e2e": { "tags": [], "implicitDependencies": ["black-dashboard"] }
+    "black-dashboard-e2e": { "tags": [], "implicitDependencies": ["black-dashboard"] },
+    "configuration": { "tags": [] },
+    "rule-engine": { "tags": [] },
+    "logging": { "tags": [] },
+    "error-handling": { "tags": [] },
+    "actions": { "tags": [] },
+    "common": { "tags": [] },
+    "http-service": { "tags": [] },
+    "foundation": { "tags": [] },
+    "validation": { "tags": [] },
+    "notifications": { "tags": [] },
+    "version-check": { "tags": [] }
   }
 }
