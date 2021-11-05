@@ -18,3 +18,20 @@ nx g @nrwl/angular:library notifications    --simpleModuleName --linter=eslint -
 nx g @nrwl/angular:library version-check    --simpleModuleName --linter=eslint --importPath=@buildmotion/version-check
 ```
 
+Move code into the library projects.
+
+> cp -R ./configuration/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/configuration
+
+```ts
+cp -R ./configuration/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/configuration
+cp -R ./rule-engine/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/rule-engine
+cp -R ./logging/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/logging
+cp -R ./error-handling/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/error-handling
+cp -R ./actions/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/actions
+cp -R ./common/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/common
+cp -R ./http-service/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/http-service
+cp -R ./foundation/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/foundation
+cp -R ./validation/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/validation
+cp -R ./notifications/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/notifications
+cp -R ./version-check/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/version-check
+```

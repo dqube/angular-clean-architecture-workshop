@@ -1,0 +1,9 @@
+<button
+  class="btn"
+  name="btn"
+  [disabled]="disabled"
+  (click)="btnClicked($event)"
+>
+  <span *ngIf="iconClass" [class]="iconClass"></span>
+  {{ label }}
+</button>
