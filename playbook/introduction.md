@@ -2,7 +2,13 @@
 
 ## Workshop
 
+This workshop will be a single-day of development to create a fullstack application using Angular and NestJS along with Nx.dev tools.
+
 ## Goals/Objectives
+
+Use a CLEAN architecture principles and approach to create a fullstack application.
+
+![ng-clean](resources/diagrams/ng-clean-arch.png)
 
 - Create Nx Workspace
 - Add Angular Application (Portal)
