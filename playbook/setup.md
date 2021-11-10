@@ -10,7 +10,7 @@
 
 We will target version 11 for our new workspace. Use the *npx* command to create an empty workspace for our projects.
 
-> npx create-nx-workspace@11.6.3 workspace --npm-scope=buildmotion
+> `npx create-nx-workspace@11.6.3 workspace --npm-scope=buildmotion`
 
 The output of the CLI command should look similar to the output listed below.
 
@@ -112,6 +112,7 @@ npx: installed 66 in 2.68s
   },
   "exclude": ["node_modules", "tmp"]
 }
+```
 
 ### nx.json
 
