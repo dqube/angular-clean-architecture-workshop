@@ -14,7 +14,19 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@buildmotion/configuration": ["libs/configuration/src/index.ts"],
+      "@buildmotion/rule-engine": ["libs/rule-engine/src/index.ts"],
+      "@buildmotion/logging": ["libs/logging/src/index.ts"],
+      "@buildmotion/error-handling": ["libs/error-handling/src/index.ts"],
+      "@buildmotion/actions": ["libs/actions/src/index.ts"],
+      "@buildmotion/common": ["libs/common/src/index.ts"],
+      "@buildmotion/http-service": ["libs/http-service/src/index.ts"],
+      "@buildmotion/foundation": ["libs/foundation/src/index.ts"],
+      "@buildmotion/validation": ["libs/validation/src/index.ts"],
+      "@buildmotion/notifications": ["libs/notifications/src/index.ts"],
+      "@buildmotion/version-check": ["libs/version-check/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -17,7 +17,7 @@ Use the following command to create a new application project in your workspace.
  - The application name is *dashboard*.
 
 ```ts
-nx generate @nrwl/angular:application dashboard
+nx generate @nrwl/angular:application black-dashboard
 ```
 
 The output of the application generate command.
@@ -25,38 +25,38 @@ The output of the application generate command.
 ```ts
 CREATE jest.config.js
 CREATE jest.preset.js
-CREATE apps/dashboard/tsconfig.editor.json
-CREATE apps/dashboard/tsconfig.json
-CREATE apps/dashboard/src/favicon.ico
-CREATE apps/dashboard/.browserslistrc
-CREATE apps/dashboard/tsconfig.app.json
-CREATE apps/dashboard/src/index.html
-CREATE apps/dashboard/src/main.ts
-CREATE apps/dashboard/src/polyfills.ts
-CREATE apps/dashboard/src/styles.scss
-CREATE apps/dashboard/src/assets/.gitkeep
-CREATE apps/dashboard/src/environments/environment.prod.ts
-CREATE apps/dashboard/src/environments/environment.ts
-CREATE apps/dashboard/src/app/app.module.ts
-CREATE apps/dashboard/src/app/app.component.scss
-CREATE apps/dashboard/src/app/app.component.html
-CREATE apps/dashboard/src/app/app.component.spec.ts
-CREATE apps/dashboard/src/app/app.component.ts
+CREATE apps/black-dashboard/tsconfig.editor.json
+CREATE apps/black-dashboard/tsconfig.json
+CREATE apps/black-dashboard/src/favicon.ico
+CREATE apps/black-dashboard/.browserslistrc
+CREATE apps/black-dashboard/tsconfig.app.json
+CREATE apps/black-dashboard/src/index.html
+CREATE apps/black-dashboard/src/main.ts
+CREATE apps/black-dashboard/src/polyfills.ts
+CREATE apps/black-dashboard/src/styles.scss
+CREATE apps/black-dashboard/src/assets/.gitkeep
+CREATE apps/black-dashboard/src/environments/environment.prod.ts
+CREATE apps/black-dashboard/src/environments/environment.ts
+CREATE apps/black-dashboard/src/app/app.module.ts
+CREATE apps/black-dashboard/src/app/app.component.scss
+CREATE apps/black-dashboard/src/app/app.component.html
+CREATE apps/black-dashboard/src/app/app.component.spec.ts
+CREATE apps/black-dashboard/src/app/app.component.ts
 CREATE .eslintrc.json
-CREATE apps/dashboard/.eslintrc.json
-CREATE apps/dashboard/jest.config.js
-CREATE apps/dashboard/src/test-setup.ts
-CREATE apps/dashboard/tsconfig.spec.json
-CREATE apps/dashboard-e2e/cypress.json
-CREATE apps/dashboard-e2e/src/fixtures/example.json
-CREATE apps/dashboard-e2e/src/integration/app.spec.ts
-CREATE apps/dashboard-e2e/src/plugins/index.js
-CREATE apps/dashboard-e2e/src/support/app.po.ts
-CREATE apps/dashboard-e2e/src/support/commands.ts
-CREATE apps/dashboard-e2e/src/support/index.ts
-CREATE apps/dashboard-e2e/tsconfig.e2e.json
-CREATE apps/dashboard-e2e/tsconfig.json
-CREATE apps/dashboard-e2e/.eslintrc.json
+CREATE apps/black-dashboard/.eslintrc.json
+CREATE apps/black-dashboard/jest.config.js
+CREATE apps/black-dashboard/src/test-setup.ts
+CREATE apps/black-dashboard/tsconfig.spec.json
+CREATE apps/black-dashboard-e2e/cypress.json
+CREATE apps/black-dashboard-e2e/src/fixtures/example.json
+CREATE apps/black-dashboard-e2e/src/integration/app.spec.ts
+CREATE apps/black-dashboard-e2e/src/plugins/index.js
+CREATE apps/black-dashboard-e2e/src/support/app.po.ts
+CREATE apps/black-dashboard-e2e/src/support/commands.ts
+CREATE apps/black-dashboard-e2e/src/support/index.ts
+CREATE apps/black-dashboard-e2e/tsconfig.e2e.json
+CREATE apps/black-dashboard-e2e/tsconfig.json
+CREATE apps/black-dashboard-e2e/.eslintrc.json
 UPDATE workspace.json
 UPDATE package.json
 UPDATE .vscode/extensions.json
@@ -67,7 +67,7 @@ UPDATE nx.json
 Each *template* has a specific set of options that can be applied when you run the command.
 
 ```ts
-nx generate @nrwl/angular:application dashboard --help
+nx generate @nrwl/angular:application black-dashboard --help
 ```
 
 | Option      | Description      |
