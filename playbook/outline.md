@@ -21,7 +21,8 @@ git checkout 2_setup/add-cross-cutting-libraries
 - [ ] create new Nx workspace
 
 ## Generate Applications
-- [ ] generate applications
+
+- [ ] [generate applications](./new-application.md#add-new-angular-application)
   - [ ] dashboard: client application to manage application settings
     - [ ] add `reference` application
   - [ ] admin: private/internal application to configure and manage clients
