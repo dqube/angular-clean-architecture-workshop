@@ -1,16 +1,43 @@
 # Outline
 
+## Getting Started
+
+- Node
+- Visual Studio Code
+- Git
+- AWS
+
+## Workshop Repository
+
+git clone https://github.com/buildmotion/angular-clean-architecture-workshop.git
+
+git checkout 1_setup/add-angular-application    
+git checkout 1_setup/create-nx-workspace
+git checkout 2_setup/add-code-to-x-concern-libs 
+git checkout 2_setup/add-cross-cutting-libraries
+
+## Create Nx Workspace
+
 - [ ] create new Nx workspace
+
+## Generate Applications
+
 - [ ] generate applications
   - [ ] dashboard: client application to manage application settings
     - [ ] add `reference` application
   - [ ] admin: private/internal application to configure and manage clients
   - [ ] client: public facing application for customers.
+
+## Generate Library Projects
+
 - [ ] add library projects
   - [ ] add source code to library projects
 - [ ] configure `admin` application with cross-cutting concerns
   - [ ] add module
   - [ ] add providers
+
+## Add Generators/Schematics to Workspace
+
 - [ ] add Nx generators/schematics to workspace tools
   - [ ] app-component
   - [ ] domain-action
