@@ -21,6 +21,7 @@ git checkout 2_setup/add-cross-cutting-libraries
 - [ ] create new Nx workspace
 
 ## Generate Applications
+
 - [ ] generate applications
   - [ ] dashboard: client application to manage application settings
     - [ ] add `reference` application
