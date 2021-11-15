@@ -23,6 +23,7 @@
     "foundation": { "tags": [] },
     "validation": { "tags": [] },
     "notifications": { "tags": [] },
-    "version-check": { "tags": [] }
+    "version-check": { "tags": [] },
+    "analytics": { "tags": [] }
   }
 }
