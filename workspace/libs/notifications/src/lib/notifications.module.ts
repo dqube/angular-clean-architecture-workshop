@@ -9,5 +9,8 @@ import { RouterModule } from '@angular/router';
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
     ]),
   ],
+
+@NgModule({
+  imports: [CommonModule],
 })
 export class NotificationsModule {}

@@ -34,4 +34,6 @@ cp -R ./foundation/src ../../../../../work/github/angular-clean-architecture-wor
 cp -R ./validation/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/validation
 cp -R ./notifications/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/notifications
 cp -R ./version-check/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/version-check
+nx g @nrwl/angular:library analytics        --simpleModuleName --linter=eslint --importPath=@buildmotion/analytics
 ```
+
