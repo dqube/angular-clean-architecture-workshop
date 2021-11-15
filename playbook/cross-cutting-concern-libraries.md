@@ -16,6 +16,7 @@ nx g @nrwl/angular:library foundation       --simpleModuleName --linter=eslint -
 nx g @nrwl/angular:library validation       --simpleModuleName --linter=eslint --importPath=@buildmotion/validation
 nx g @nrwl/angular:library notifications    --simpleModuleName --linter=eslint --importPath=@buildmotion/notifications
 nx g @nrwl/angular:library version-check    --simpleModuleName --linter=eslint --importPath=@buildmotion/version-check
+nx g @nrwl/angular:library analytics        --simpleModuleName --linter=eslint --importPath=@buildmotion/analytics
 ```
 
 Move code into the library projects.
@@ -34,6 +35,6 @@ cp -R ./foundation/src ../../../../../work/github/angular-clean-architecture-wor
 cp -R ./validation/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/validation
 cp -R ./notifications/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/notifications
 cp -R ./version-check/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/version-check
-nx g @nrwl/angular:library analytics        --simpleModuleName --linter=eslint --importPath=@buildmotion/analytics
+cp -R ./analytics/src ../../../../../work/github/angular-clean-architecture-workshop/workspace/libs/analytics
 ```
 

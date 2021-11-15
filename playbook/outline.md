@@ -22,11 +22,8 @@ git checkout 2_setup/add-cross-cutting-libraries
 
 ## Generate Applications
 
-<<<<<<< HEAD
 - [ ] [generate applications](./new-application.md#add-new-angular-application)
-=======
 - [ ] generate applications
->>>>>>> b1abd162a698712eaa3e2401d0a9f2c5db32e9c5
   - [ ] dashboard: client application to manage application settings
     - [ ] add `reference` application
   - [ ] admin: private/internal application to configure and manage clients
