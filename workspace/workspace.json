@@ -425,6 +425,33 @@
           }
         }
       }
+    },
+    "analytics": {
+      "projectType": "library",
+      "root": "libs/analytics",
+      "sourceRoot": "libs/analytics/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/analytics/src/**/*.ts",
+              "libs/analytics/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/analytics"
+          ],
+          "options": {
+            "jestConfig": "libs/analytics/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
