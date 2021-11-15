@@ -12,5 +12,6 @@ module.exports = {
     '<rootDir>/libs/validation',
     '<rootDir>/libs/notifications',
     '<rootDir>/libs/version-check',
+    '<rootDir>/libs/analytics',
   ],
 };

@@ -14,3 +14,4 @@ export { ServiceError } from './lib/models/service-error.model';
 export { ServiceMessage } from './lib/models/ServiceMessage';
 export { ServiceResponse } from './lib/models/service-response.model';
 export { SingletonServiceBase } from './lib/singleton-service-base';
+export * from './lib/foundation.module';
