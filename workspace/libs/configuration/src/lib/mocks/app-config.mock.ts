@@ -41,29 +41,6 @@ export const AppConfigMock: IConfiguration = {
     siteId: '1',
     url: `https://matomo.buildmotion.io`
   },
-  amplifyConfig: {
-    Auth: {
-      mandatorySignIn: true,
-      region: ``,
-      userPoolId: ``,
-      identityPoolId: ``,
-      userPoolWebClientId: ``
-    },
-    Storage: {
-      region: ``,
-      bucket: ``,
-      identityPoolId: ``
-    },
-    API: {
-      endpoints: [
-        {
-          name: `dashboard`,
-          endpoint: ``,
-          region: ``
-        },
-      ]
-    }
-  },
   webConfig: {
     applicationName: 'dashboard',
     blogURL: 'https://www.medium.com/@angularlicious',

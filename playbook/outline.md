@@ -15,6 +15,7 @@ git checkout 1_setup/add-angular-application
 git checkout 1_setup/create-nx-workspace
 git checkout 2_setup/add-code-to-x-concern-libs 
 git checkout 2_setup/add-cross-cutting-libraries
+git checkout 3_app/configure-application
 
 ## Create Nx Workspace
 
@@ -22,11 +23,8 @@ git checkout 2_setup/add-cross-cutting-libraries
 
 ## Generate Applications
 
-<<<<<<< HEAD
 - [ ] [generate applications](./new-application.md#add-new-angular-application)
-=======
 - [ ] generate applications
->>>>>>> b1abd162a698712eaa3e2401d0a9f2c5db32e9c5
   - [ ] dashboard: client application to manage application settings
     - [ ] add `reference` application
   - [ ] admin: private/internal application to configure and manage clients
@@ -36,8 +34,11 @@ git checkout 2_setup/add-cross-cutting-libraries
 
 - [ ] add library projects
   - [ ] add source code to library projects
-- [ ] configure `admin` application with cross-cutting concerns
-  - [ ] add module
+
+## Add Cross-Cutting Concerns to Application
+
+- [ ] configure `dashboard` application with cross-cutting concerns
+  - [ ] [add module](cross-cutting-concern-libraries.md)
   - [ ] add providers
 
 ## Add Generators/Schematics to Workspace

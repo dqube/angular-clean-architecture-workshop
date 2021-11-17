@@ -7,6 +7,12 @@ import { datadogLogs } from '@datadog/browser-logs';
 import { Severity } from '../severity.enum';
 import { datadogRum } from '@datadog/browser-rum';
 
+/**
+ * More information:
+ *
+ * - https://app.datadoghq.com/organization-settings/client-tokens
+ * - https://docs.datadoghq.com/logs/log_collection/javascript/
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -36,7 +42,7 @@ export class DataDogWriterService extends LogWriter {
   }
 
   handleSettings(settings: IConfiguration) {
-    if (settings) {
+    if (settings && !this.hasWriter) {
       this.config = settings.dataDogConfig;
       this.hasWriter = true;
       console.log(`Initializing [DataDog] writer for logging.`);

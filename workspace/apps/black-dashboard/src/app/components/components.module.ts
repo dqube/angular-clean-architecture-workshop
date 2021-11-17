@@ -6,13 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { DxVectorMapModule } from 'devextreme-angular';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { VectorMapComponent } from './vector-map/vector-map.component';
 import { PictureUploadComponent } from './picture-upload/picture-upload.component';
 import { AuthNavbarComponent } from './auth-navbar/auth-navbar.component';
 import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
@@ -24,14 +22,12 @@ import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
     HttpClientModule,
     FormsModule,
     JwBootstrapSwitchNg2Module,
-    DxVectorMapModule,
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
     ModalModule.forRoot()
   ],
   declarations: [
     FooterComponent,
-    VectorMapComponent,
     NavbarComponent,
     SidebarComponent,
     PictureUploadComponent,
@@ -40,7 +36,6 @@ import { FixedPluginComponent } from './fixed-plugin/fixed-plugin.component';
   ],
   exports: [
     FooterComponent,
-    VectorMapComponent,
     NavbarComponent,
     SidebarComponent,
     PictureUploadComponent,
