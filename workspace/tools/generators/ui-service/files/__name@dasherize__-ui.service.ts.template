@@ -1,0 +1,10 @@
+import { Injectable } from '@angular/core';
+import { LoggingService } from '@buildmotion/logging';
+import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
+
+@Injectable()
+export class <%= classify(name) %>UIService extends ServiceBase {
+  constructor(loggingService: LoggingService, serviceContext: ServiceContext) {
+    super('<%= classify(name) %>UIService', loggingService, serviceContext);
+  }
+}

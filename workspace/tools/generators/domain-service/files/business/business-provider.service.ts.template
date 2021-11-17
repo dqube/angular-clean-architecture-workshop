@@ -1,0 +1,29 @@
+import { Injectable, Inject } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { ConfigurationService } from '@buildmotion/configuration';
+import { LoggingService } from '@buildmotion/logging';
+import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
+import { ApiResponse } from '@buildmotion/common';
+import { Http<%= classify(name) %>RepositoryService } from './http-<%= dasherize(name) %>-repository.service';
+import { IBusinessProviderService } from './i-business-provider.service';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class BusinessProviderService extends ServiceBase implements IBusinessProviderService {
+  constructor(
+    @Inject(Http<%= classify(name) %>RepositoryService) public apiService: Http<%= classify(name) %>RepositoryService,
+    public configService: ConfigurationService,
+    loggingService: LoggingService,
+    serviceContext: ServiceContext
+  ) {
+    super('BusinessProviderService', loggingService, serviceContext);
+  }
+
+  // someMethod<T>(someInput: string): Observable<ApiResponse<T>> {
+  //   const action = new SomeAction<T>(someInput);
+  //   action.Do(this);
+  //   return action.response;
+  // }
+}
