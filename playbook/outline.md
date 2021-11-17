@@ -16,6 +16,7 @@ git checkout 1_setup/create-nx-workspace
 git checkout 2_setup/add-code-to-x-concern-libs 
 git checkout 2_setup/add-cross-cutting-libraries
 git checkout 3_app/configure-application
+git checkout 4_tools/generators-and-schematics
 
 ## Create Nx Workspace
 
@@ -49,6 +50,9 @@ git checkout 3_app/configure-application
   - [ ] domain-library
   - [ ] domain-service
   - [ ] ui-service
+
+## Generate [Accounts] Library Project(s)
+
 - [ ] generate `accounts-ui` library project
 - [ ] generate `accounts-service` library project
 - [ ] generate `accounts-api` project

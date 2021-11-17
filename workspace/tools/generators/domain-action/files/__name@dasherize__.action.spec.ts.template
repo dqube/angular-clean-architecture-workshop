@@ -1,0 +1,7 @@
+import { <%= classify(name) %>Action } from './<%= dasherize(name) %>.action';
+
+describe('<%= classify(name) %>Action', () => {
+  it('should create an instance', () => {
+    expect(new <%= classify(name) %>Action()).toBeTruthy();
+  });
+});
