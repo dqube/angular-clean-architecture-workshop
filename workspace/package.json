@@ -48,8 +48,6 @@
     "chart.js": "2.9.4",
     "core-js": "3.15.2",
     "d3-scale": "3.2.1",
-    "devextreme": "19.2.6",
-    "devextreme-angular": "19.2.6",
     "font-awesome": "^4.7.0",
     "fullcalendar": "3.10.1",
     "guid-typescript": "1.0.9",
