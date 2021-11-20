@@ -1,9 +1,72 @@
-<div class=" content">
-  <div class=" row">
-    <!-- ADD STUFF FOR ROW 1 -->
-    <h2>Create New Account</h2>
+<div class="content">
+  <div class="row">
+    <!-- REGISTER/CREATE ACCOUNT -->
+    <div class="col-md-6">
+      <form id="RegisterValidation" [formGroup]="form" (ngSubmit)="onSubmit()" novalidate class="bv-content">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Register Form</h4>
+          </div>
+          <div class="card-body">
+            <!-- EMAIL ADDRESS -->
+            <div class="form-group has-label" [ngClass]="{
+                'has-danger': !form.valid && emailAddress.touched && emailAddress.invalid,
+                'has-success': form.valid && emailAddress.touched && emailAddress.valid
+              }">
+              <label> Email Address * </label>
+              <input class="form-control" name="email" formControlName="emailAddress" type="email" />
+              <label class="error" *ngIf="!form.valid && emailAddress.touched && emailAddress.hasError('required')">The email address is required.</label>
+              <label class="error" *ngIf="!form.valid && emailAddress.touched && emailAddress.hasError('maxlength')">The email address max length is 100 characters.</label>
+              <label class="error" *ngIf="!form.valid && emailAddress.touched && emailAddress.hasError('invalidEmailAddress')">The email address format is not valid.</label>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="form-group has-label" [ngClass]="{
+                'has-danger': !form.valid && password.touched && password.invalid,
+                'has-success': form.valid && password.touched && password.valid
+              }">
+              <label> Password * </label>
+              <input class="form-control" id="registerPassword" formControlName="password" name="password" required=""
+                type="password" />
+              <label class="error" *ngIf="!form.valid && password.touched && password.hasError('required')">This password is required.</label>
+              <label class="error" *ngIf="!form.valid && password.touched && password.hasError('minlength')">This password minimum length is 8 characters.</label>
+              <label class="error" *ngIf="!form.valid && password.touched && password.hasError('maxlength')">This password max length is 128 characters.</label>
+              <label class="error" *ngIf="!form.valid && password.touched && password.hasError('PasswordStrength')">This password strength is not valid - must have alpha, numeric, and special characters!</label>
+              
+            </div>
+
+            <!-- PASSWORD CONFIRM -->
+            <div class="form-group has-label" [ngClass]="{
+                'has-danger': !form.valid && passwordConfirm.touched && passwordConfirm.invalid,
+                'has-success': form.valid && passwordConfirm.touched && passwordConfirm.valid
+              }">
+              <label> Confirm Password * </label>
+              <input 
+                class="form-control" 
+                formControlName="passwordConfirm" 
+                id="registerPasswordConfirmation"
+                name="password_confirmation" 
+                type="password" />
+              <label class="error" *ngIf="!form.valid && passwordConfirm.touched && passwordConfirm.hasError('required')">This confirmation password is required.</label>
+              <label class="error" *ngIf="!form.valid && passwordConfirm.touched && passwordConfirm.hasError('passwordMismatch')">This passwords do not match.</label>
+            </div>
+            <div class="category form-category">* Required fields</div>
+          </div>
+          <div class="card-footer text-right">
+            <div class="form-check pull-left">
+              <label class="form-check-label">
+                <input class="form-check-input" formControlName="acceptTermsConditions" name="optionCheckboxes" type="checkbox" />
+                <span class="form-check-sign"> </span> Accept the terms and conditions
+              </label>
+              <label class="error" *ngIf="acceptTermsConditions.touched && acceptTermsConditions.hasError('required')">You must accept the terms and conditions.</label>
+            </div>
+            <button class="btn btn-danger" type="submit">Register</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-  <div class=" row">
+  <div class="row">
     <!-- ADD STUFF HERE FOR ROW 2 -->
   </div>
 </div>
