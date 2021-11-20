@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ComponentBase } from '@buildmotion/foundation';
 import { LoggingService, Severity } from '@buildmotion/logging';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'buildmotion-new-account',
@@ -52,9 +53,38 @@ export class NewAccountComponent extends ComponentBase implements OnInit {
     this.onPasswordValueChange();
   }
 
-  onPasswordValueChange() {
+  private onPasswordValueChange() {
+    this.passwordConfirm.valueChanges.pipe(debounceTime(1), distinctUntilChanged()).subscribe(() => {
+      this.passwordConfirm.setErrors(null);
+    });
+
+    this.password.valueChanges.pipe(debounceTime(150)).subscribe(() => {
+      if (this.password.value === '') {
+        this.resetStrengthIndicators();
+      } else {
+        this.determinePasswordStrength(this.password.value);
+      }
+    });
+  }
+
+  private determinePasswordStrength(value: any) {
     throw new Error('Method not implemented.');
   }
 
+  private resetStrengthIndicators() {
+    throw new Error('Method not implemented.');
+  }
+
+  get emailAddress(): AbstractControl {
+    return this.form.get('emailAddress') as FormControl;
+  }
+
+  get passwordConfirm(): AbstractControl {
+    return this.form.get('passwordConfirm') as FormControl;
+  }
+
+  get password(): AbstractControl {
+    return this.form.get('password') as FormControl;
+  }
 
 }
