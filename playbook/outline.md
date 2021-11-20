@@ -19,6 +19,8 @@ git checkout 3_app/configure-application
 git checkout 4_tools/generators-and-schematics
 git checkout 5_accounts/create-ui-library
 git checkout 5-2/accounts/add-new-account-form
+git checkout 5-3/accounts/add-new-account-template
+git checkout 5-4/accounts/new-accounts-ui-service 
 
 ## Create Nx Workspace
 
