@@ -1,7 +1,13 @@
 <div class=" content">
   <div class=" row">
     <!-- ADD STUFF FOR ROW 1 -->
-    <h1>Home works</h1>
+    <ul>
+      <li><a [routerLink]="['/accounts/new-account']" routerLinkActive="router-link-active">Create new account.</a></li>
+      <li><a [routerLink]="['/accounts/login']" routerLinkActive="router-link-active">Login</a></li>
+      <li><a [routerLink]="['/accounts/logout']" routerLinkActive="router-link-active">Logout</a></li>
+      <li><a [routerLink]="['/accounts/change-password']" routerLinkActive="router-link-active">Change password</a></li>
+      <li><a [routerLink]="['/accounts/forgot-password']" routerLinkActive="router-link-active">Forgot password</a></li>
+    </ul>
   </div>
   <div class=" row">
     <!-- ADD STUFF HERE FOR ROW 2 -->

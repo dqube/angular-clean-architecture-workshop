@@ -17,6 +17,8 @@ git checkout 2_setup/add-code-to-x-concern-libs
 git checkout 2_setup/add-cross-cutting-libraries
 git checkout 3_app/configure-application
 git checkout 4_tools/generators-and-schematics
+git checkout 5_accounts/create-ui-library
+git checkout 5-2/accounts/add-new-account-form
 
 ## Create Nx Workspace
 
@@ -54,7 +56,54 @@ git checkout 4_tools/generators-and-schematics
 ## Generate [Accounts] Library Project(s)
 
 - [ ] generate `accounts-ui` library project
+
+```ts
+nx generate @nrwl/angular:library --name=accounts-ui --style=scss --directory=accounts --importPath=@buildmotion/accounts/accounts-ui --lazy --linter=eslint --routing --simpleModuleName
+```
+
+- [ ] create a default target module to load when the module is lazy-loaded by an application route.
+
+```ts
+nx g @nrwl/angular:module --name=home --project=accounts-ui --module=/accounts-ui.module --route=home --routing --dry-run -d
+```
+
+- [ ] update component template
+- [ ] add route to the application; lazy-load accounts-ui module
+
+## Add [Account] Component(s)
+
+```ts
+nx g @nrwl/angular:module --name=new-account      --project=accounts-ui --module=/accounts-ui.module --routing --route=new-account 
+nx g @nrwl/angular:module --name=verify-account   --project=accounts-ui --module=/accounts-ui.module --routing --route=verify-account 
+nx g @nrwl/angular:module --name=login            --project=accounts-ui --module=/accounts-ui.module --routing --route=login
+nx g @nrwl/angular:module --name=logout           --project=accounts-ui --module=/accounts-ui.module --routing --route=logout
+nx g @nrwl/angular:module --name=change-password  --project=accounts-ui --module=/accounts-ui.module --routing --route=change-password
+nx g @nrwl/angular:module --name=forgot-password  --project=accounts-ui --module=/accounts-ui.module --routing --route=forgot-password
+nx g @nrwl/angular:component --name=password-strength --project=accounts-ui --module=/accounts-ui.module -d
+```
+
+- [ ] add new single component module to create new account (e.g., new-account)
+  - [ ] use CLI: 
+- [ ] extends ComponentBase
+- [ ] add reactive form to the component
+  - [ ] update template with form and inputs
+  - [ ] initialize FormGroup with configuration and validation of controls
+
+Add Validation Service
+
+- [ ] add `ValidationService`
+
+```ts
+nx g @nrwl/angular:service --name=validation --project=validation -d
+```
+
+- [ ] implement submit on the component
+
+## [Accounts] Domain Library for Business Logic
+
 - [ ] generate `accounts-service` library project
+## [Accounts] Domain Library for Business Logic
+
 - [ ] generate `accounts-api` project
   - [ ] add pre-requisite packages
   - [ ] add `healthCheck` endpoint
@@ -62,6 +111,7 @@ git checkout 4_tools/generators-and-schematics
     - [ ] controller
     - [ ] service
     - [ ] verify with Postman
+
 - [ ] update application configuration with `healthCheck` URL endpoint
   - [ ] local/development environment configuration
 - [ ] generate `create-account` component module with routes in `client` application project
