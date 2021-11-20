@@ -73,12 +73,13 @@ nx g @nrwl/angular:module --name=home --project=accounts-ui --module=/accounts-u
 ## Add [Account] Component(s)
 
 ```ts
-nx g @nrwl/angular:module --name=new-account --project=accounts-ui --module=/accounts-ui.module --route=new-account --routing --dry-run -d
-nx g @nrwl/angular:module --name=verify-account --project=accounts-ui --module=/accounts-ui.module --route=verify-account --routing --dry-run -d
-nx g @nrwl/angular:module --name=login --project=accounts-ui --module=/accounts-ui.module --route=login --routing --dry-run -d
-nx g @nrwl/angular:module --name=logout --project=accounts-ui --module=/accounts-ui.module --route=logout --routing --dry-run -d
-nx g @nrwl/angular:module --name=change-password --project=accounts-ui --module=/accounts-ui.module --route=change-password --routing --dry-run -d
-nx g @nrwl/angular:module --name=forgot-password --project=accounts-ui --module=/accounts-ui.module --route=forgot-password --routing --dry-run -d
+nx g @nrwl/angular:module --name=new-account      --project=accounts-ui --module=/accounts-ui.module --routing --route=new-account 
+nx g @nrwl/angular:module --name=verify-account   --project=accounts-ui --module=/accounts-ui.module --routing --route=verify-account 
+nx g @nrwl/angular:module --name=login            --project=accounts-ui --module=/accounts-ui.module --routing --route=login
+nx g @nrwl/angular:module --name=logout           --project=accounts-ui --module=/accounts-ui.module --routing --route=logout
+nx g @nrwl/angular:module --name=change-password  --project=accounts-ui --module=/accounts-ui.module --routing --route=change-password
+nx g @nrwl/angular:module --name=forgot-password  --project=accounts-ui --module=/accounts-ui.module --routing --route=forgot-password
+nx g @nrwl/angular:component --name=password-strength --project=accounts-ui --module=/accounts-ui.module -d
 ```
 
 - [ ] add new single component module to create new account (e.g., new-account)
@@ -87,7 +88,16 @@ nx g @nrwl/angular:module --name=forgot-password --project=accounts-ui --module=
 - [ ] add reactive form to the component
   - [ ] update template with form and inputs
   - [ ] initialize FormGroup with configuration and validation of controls
-  - [ ] implement submit on the component
+
+Add Validation Service
+
+- [ ] add `ValidationService`
+
+```ts
+nx g @nrwl/angular:service --name=validation --project=validation -d
+```
+
+- [ ] implement submit on the component
 
 ## [Accounts] Domain Library for Business Logic
 
