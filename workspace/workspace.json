@@ -382,6 +382,28 @@
           }
         }
       }
+    },
+    "accounts-ui": {
+      "projectType": "library",
+      "root": "libs/accounts/accounts-ui",
+      "sourceRoot": "libs/accounts/accounts-ui/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/accounts/accounts-ui/src/**/*.ts", "libs/accounts/accounts-ui/src/**/*.html"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/accounts/accounts-ui"],
+          "options": {
+            "jestConfig": "libs/accounts/accounts-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

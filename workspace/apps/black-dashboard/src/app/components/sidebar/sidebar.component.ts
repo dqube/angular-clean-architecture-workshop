@@ -240,6 +240,13 @@ export const ROUTES: RouteInfo[] = [
     type: 'link',
     icontype: 'tim-icons icon-chart-pie-36',
     rtlTitle: 'لوحة القيادة'
+  },
+  {
+    path: '/accounts',
+    title: 'Accounts',
+    type: 'link',
+    icontype: 'tim-icons icon-chart-pie-36',
+    rtlTitle: ''
   }
 ];
 

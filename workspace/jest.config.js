@@ -13,5 +13,6 @@ module.exports = {
     '<rootDir>/libs/notifications',
     '<rootDir>/libs/version-check',
     '<rootDir>/libs/analytics',
+    '<rootDir>/libs/accounts/accounts-ui',
   ],
 };

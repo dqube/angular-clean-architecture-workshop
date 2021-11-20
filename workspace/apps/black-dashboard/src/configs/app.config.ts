@@ -29,7 +29,7 @@ export const AppConfig: IConfiguration = {
   },
   loggingConfig: {
     applicationName: 'Dashboard',
-    isProduction: true,
+    isProduction: false,
   },
   errorHandlingConfig: {
     applicationName: 'Dashboard',
