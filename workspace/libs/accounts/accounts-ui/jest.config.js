@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'accounts-accounts-ui',
+  displayName: 'accounts-ui',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
