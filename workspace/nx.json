@@ -24,6 +24,7 @@
     "validation": { "tags": [] },
     "notifications": { "tags": [] },
     "version-check": { "tags": [] },
-    "analytics": { "tags": [] }
+    "analytics": { "tags": [] },
+    "accounts-accounts-ui": { "tags": [] }
   }
 }

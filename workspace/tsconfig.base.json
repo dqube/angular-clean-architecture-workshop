@@ -26,7 +26,8 @@
       "@buildmotion/validation": ["libs/validation/src/index.ts"],
       "@buildmotion/notifications": ["libs/notifications/src/index.ts"],
       "@buildmotion/version-check": ["libs/version-check/src/index.ts"],
-      "@buildmotion/analytics": ["libs/analytics/src/index.ts"]
+      "@buildmotion/analytics": ["libs/analytics/src/index.ts"],
+      "@buildmotion/accounts/accounts-ui": ["libs/accounts/accounts-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
