@@ -4,7 +4,7 @@ import { APP_INITIALIZER, ErrorHandler, ModuleWithProviders, NgModule } from '@a
 import { MatomoService } from '@buildmotion/analytics';
 import { ConfigurationContext, ConfigurationModule, ConfigurationService } from '@buildmotion/configuration';
 import { ErrorHandlingModule, ErrorHandlingService } from '@buildmotion/error-handling';
-import { HttpErrorInterceptor, HttpResponseInterceptor } from '@buildmotion/http-service';
+import { HttpErrorInterceptor, HttpResponseInterceptor, HttpService } from '@buildmotion/http-service';
 import { ConsoleWriter, DataDogWriterService, LoggingModule, LoggingService } from '@buildmotion/logging';
 import { NotificationService } from '@buildmotion/notifications';
 import { VersionCheckModule, VersionCheckService } from '@buildmotion/version-check';
@@ -91,6 +91,7 @@ export class CrossCuttingModule {
         ...INTERCEPTORS,
         MatomoService,
         VersionCheckService,
+        HttpService
       ],
     };
   }
