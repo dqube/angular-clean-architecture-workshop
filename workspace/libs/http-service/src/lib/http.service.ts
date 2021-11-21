@@ -5,13 +5,14 @@ import { ApiResponse } from '@buildmotion/common';
 import { HttpRequestMethod } from './http-request-methods.enum';
 import { HttpRequestOptions } from './http-request-options';
 import { LoggingService, Severity } from '@buildmotion/logging';
-import { ConfigurationService } from '@buildmotion/configuration';
+import { ConfigurationService, IAPIConfig, IConfiguration } from '@buildmotion/configuration';
 import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
 import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class HttpService extends ServiceBase {
   private csrfToken = '';
+  apiConfig: IAPIConfig;
 
   constructor(
     private httpClient: HttpClient,
@@ -20,7 +21,14 @@ export class HttpService extends ServiceBase {
     private configService: ConfigurationService
   ) {
     super('HttpService', loggingService, serviceContext);
-    if (configService.settings) this.getCsrfToken().subscribe((resp: ApiResponse<any>) => this.handleCsrfResponse(resp));
+    this.configService.settings$.subscribe((settings: IConfiguration) => this.handleSettings(settings))
+  }
+
+  private handleSettings(settings: IConfiguration): void {
+    if (settings && settings.apiConfig) {
+      this.apiConfig = settings.apiConfig;
+      this.getCsrfToken().subscribe((resp: ApiResponse<any>) => this.handleCsrfResponse(resp));
+    }
   }
 
   /**
@@ -101,7 +109,7 @@ export class HttpService extends ServiceBase {
    * @returns Observable
    */
   getCsrfToken() {
-    const requestUrl = this.configService.settings.apiConfig.csrf;
+    const requestUrl = this.apiConfig.csrf;
     this.loggingService.log(this.serviceName, Severity.Information, `Preparing to get CSRF token.`);
     const options = this.createOptions(HttpRequestMethod.get, null, requestUrl, null, null, false);
     return this.execute(options);
