@@ -12,16 +12,17 @@
 ```ts
 git clone https://github.com/buildmotion/angular-clean-architecture-workshop.git
 
-git checkout 1_setup/add-angular-application    
+git checkout 1_setup/add-angular-application
 git checkout 1_setup/create-nx-workspace
-git checkout 2_setup/add-code-to-x-concern-libs 
+git checkout 2_setup/add-code-to-x-concern-libs
 git checkout 2_setup/add-cross-cutting-libraries
 git checkout 3_app/configure-application
 git checkout 4_tools/generators-and-schematics
 git checkout 5_accounts/create-ui-library
 git checkout 5-2/accounts/add-new-account-form
 git checkout 5-3/accounts/add-new-account-template
-git checkout 5-4/accounts/new-accounts-ui-service 
+git checkout 5-4/accounts/new-accounts-ui-service
+git checkout 6-1/accounts/domain-service
 ```
 
 ## Create Nx Workspace
@@ -122,6 +123,7 @@ Generate a new library to share data types between Angular and NestJS projects:
 ```ts
 nx g @nrwl/workspace:library accounts/types
 ```
+
 ## [Accounts] Domain Library for Business Logic
 
 - [ ] generate `accounts-service` library project
@@ -131,12 +133,16 @@ Generate accounts-service project.
 ```ts
 nx workspace-schematic domain-service
 nx workspace-schematic domain-library --directory=accounts --importPath=@buildmotion/accounts --name=accounts-service --dry-run
-
-nx @nrwl/angular:class test-model --project=accounts-service -d
-nx generate @nrwl/angular:library --name=test-ui --style=scss --directory=test --importPath=@buildmotion/test/test-ui --lazy --linter=eslint --routing --simpleModuleName
 ```
 
-## [Accounts] Domain Library for Business Logic
+Add an *action* to implement the business logic with business rules and/or validations.
+
+```ts
+nx workspace-schematic domain-action "createAccount" --project=accounts-service -d
+```
+
+
+## [Accounts] API Library for Backend
 
 - [ ] generate `accounts-api` project
   - [ ] add pre-requisite packages
