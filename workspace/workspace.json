@@ -404,6 +404,41 @@
           }
         }
       }
+    },
+    "accounts-types": {
+      "root": "libs/accounts/types",
+      "sourceRoot": "libs/accounts/types/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/accounts/types/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/accounts/types"],
+          "options": {
+            "jestConfig": "libs/accounts/types/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "accounts-service": {
+      "projectType": "library",
+      "root": "libs/accounts/accounts-service",
+      "sourceRoot": "libs/accounts/accounts-service/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/accounts/accounts-service/src/**/*.ts", "libs/accounts/accounts-service/src/**/*.html"]
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -413,8 +448,7 @@
     "@nrwl/angular:application": {
       "style": "scss",
       "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
+      "unitTestRunner": "jest"
     },
     "@nrwl/angular:library": {
       "style": "scss",
