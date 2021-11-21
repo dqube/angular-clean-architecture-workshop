@@ -5,6 +5,8 @@ import { ComponentBase } from '@buildmotion/foundation';
 import { LoggingService, Severity } from '@buildmotion/logging';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { ValidationService } from '@buildmotion/validation';
+import { NewAccountUIService } from './new-account-ui.service';
+import { NewAccount } from '@buildmotion/accounts/types';
 
 @Component({
   selector: 'buildmotion-new-account',
@@ -20,6 +22,7 @@ export class NewAccountComponent extends ComponentBase implements OnInit {
   private passwordValidators = [Validators.required, Validators.minLength(8), Validators.maxLength(128)];
 
   constructor(
+    private uiService: NewAccountUIService,
     private formBuilder: FormBuilder,
     private validationService: ValidationService,
     loggingService: LoggingService,
@@ -40,6 +43,8 @@ export class NewAccountComponent extends ComponentBase implements OnInit {
 
     if (this.form.valid) {
       this.loggingService.log(this.componentName, Severity.Information, `Simulate [create account]...`);
+      const newAccount: NewAccount = { ...this.form.value };
+      this.uiService.createAccount(newAccount);
     } else {
       this.loggingService.log(this.componentName, Severity.Warning, `The create account form is not valid.`);
       this.passwordConfirm.setValidators(null);
@@ -52,7 +57,6 @@ export class NewAccountComponent extends ComponentBase implements OnInit {
       emailAddress: new FormControl(undefined, {
         validators: [Validators.required, Validators.maxLength(100)],
         asyncValidators: [
-          // ADD ASYNC EMAIL VALIDATION HERE;
           this.validationService.EmailAddressFormat
         ],
         updateOn: 'blur',

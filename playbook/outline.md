@@ -9,6 +9,7 @@
 
 ## Workshop Repository
 
+```ts
 git clone https://github.com/buildmotion/angular-clean-architecture-workshop.git
 
 git checkout 1_setup/add-angular-application    
@@ -21,6 +22,7 @@ git checkout 5_accounts/create-ui-library
 git checkout 5-2/accounts/add-new-account-form
 git checkout 5-3/accounts/add-new-account-template
 git checkout 5-4/accounts/new-accounts-ui-service 
+```
 
 ## Create Nx Workspace
 
@@ -99,11 +101,41 @@ Add Validation Service
 nx g @nrwl/angular:service --name=validation --project=validation -d
 ```
 
-- [ ] implement submit on the component
+## UI Service
 
+- [ ] implement submit on the component
+- [ ] add UI Service
+
+> NOTE: NEED TO INSTALL
+> - [ ] @angular-devkit/core@11.2.0
+> - [ ] Update workspace.json version to "1"
+> See: https://nx.dev/l/n/core-concepts/configuration#version
+> When the version of workspace.json is set to 2, targets, generators and executor properties are used instead of the version 1 properties architect, schematics and builder.
+
+```ts
+nx workspace-schematic ui-service new-account --path=new-account --project=accounts-ui -d
+CREATE libs/accounts/accounts-ui/src/lib/new-account/new-account-ui.service.ts (392 bytes)
+```
+
+Generate a new library to share data types between Angular and NestJS projects:
+
+```ts
+nx g @nrwl/workspace:library accounts/types
+```
 ## [Accounts] Domain Library for Business Logic
 
 - [ ] generate `accounts-service` library project
+
+Generate accounts-service project.
+
+```ts
+nx workspace-schematic domain-service
+nx workspace-schematic domain-library --directory=accounts --importPath=@buildmotion/accounts --name=accounts-service --dry-run
+
+nx @nrwl/angular:class test-model --project=accounts-service -d
+nx generate @nrwl/angular:library --name=test-ui --style=scss --directory=test --importPath=@buildmotion/test/test-ui --lazy --linter=eslint --routing --simpleModuleName
+```
+
 ## [Accounts] Domain Library for Business Logic
 
 - [ ] generate `accounts-api` project

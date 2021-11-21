@@ -14,5 +14,7 @@ module.exports = {
     '<rootDir>/libs/version-check',
     '<rootDir>/libs/analytics',
     '<rootDir>/libs/accounts/accounts-ui',
+    '<rootDir>/libs/accounts/types',
+    '<rootDir>/libs/accounts/accounts-service',
   ],
 };

@@ -27,7 +27,9 @@
       "@buildmotion/notifications": ["libs/notifications/src/index.ts"],
       "@buildmotion/version-check": ["libs/version-check/src/index.ts"],
       "@buildmotion/analytics": ["libs/analytics/src/index.ts"],
-      "@buildmotion/accounts/accounts-ui": ["libs/accounts/accounts-ui/src/index.ts"]
+      "@buildmotion/accounts/accounts-ui": ["libs/accounts/accounts-ui/src/index.ts"],
+      "@buildmotion/accounts/types": ["libs/accounts/types/src/index.ts"],
+      "@buildmotion/accounts/accounts-service": ["libs/accounts/accounts-service/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

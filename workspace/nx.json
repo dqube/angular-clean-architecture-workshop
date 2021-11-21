@@ -25,6 +25,8 @@
     "notifications": { "tags": [] },
     "version-check": { "tags": [] },
     "analytics": { "tags": [] },
-    "accounts-ui": { "tags": [] }
+    "accounts-ui": { "tags": [] },
+    "accounts-types": { "tags": [] },
+    "accounts-service": { "tags": [] }
   }
 }
