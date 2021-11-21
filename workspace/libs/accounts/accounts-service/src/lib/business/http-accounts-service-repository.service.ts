@@ -1,4 +1,4 @@
-import { ConfigurationService } from '@buildmotion/configuration';
+import { ConfigurationService, IAPIConfig, IConfiguration } from '@buildmotion/configuration';
 import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
 import { HttpRequestMethod, HttpService } from '@buildmotion/http-service';
 import { LoggingService, Severity } from '@buildmotion/logging';
@@ -13,8 +13,17 @@ import { ApiResponse } from '@buildmotion/common';
 })
 export class HttpAccountsServiceRepositoryService extends ServiceBase implements IHttpAccountsServiceRepositoryService {
 
+  apiConfig: IAPIConfig;
+
   constructor(private httpService: HttpService, private configService: ConfigurationService, loggingService: LoggingService, serviceContext: ServiceContext) {
     super('HttpAccountsServiceRepositoryService', loggingService, serviceContext);
+    this.configService.settings$.subscribe((settings: IConfiguration) => this.handleSettings(settings));
+  }
+
+  private handleSettings(settings: IConfiguration): void {
+    if (settings && settings.apiConfig) {
+      this.apiConfig = settings.apiConfig;
+    }
   }
 
   // performAccountsService<T>(someInput: string): Observable<any> {
@@ -25,7 +34,7 @@ export class HttpAccountsServiceRepositoryService extends ServiceBase implements
   // }
 
   createAccount<T>(newAccount: NewAccount): Observable<ApiResponse<T>> {
-    const requestUrl = `${this.configService.settings.apiConfig.baseUrl}/accounts`;
+    const requestUrl = `${this.apiConfig.baseUrl}/accounts`;
     this.loggingService.log(this.serviceName, Severity.Information, `Preparing to call API to...${requestUrl}`);
     const options = this.httpService.createOptions(HttpRequestMethod.post, this.httpService.createHeader(), requestUrl, newAccount, false);
     return this.httpService.execute(options);
