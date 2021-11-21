@@ -147,6 +147,6 @@ export default function (options: AppComponentOptions): Rule {
       move(parsedPath.path),
     ]);
 
-    return chain([addDeclarationToNgModule(options), mergeWith(templateSource), options.lintFix ? applyLintFix(options.path) : noop()]);
+    return chain([addDeclarationToNgModule(options), mergeWith(templateSource)]);
   };
 }

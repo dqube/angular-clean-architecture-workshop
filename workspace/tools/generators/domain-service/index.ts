@@ -32,6 +32,6 @@ export default function (options: DomainServiceOptions): Rule {
       move(parsedPath.path),
     ]);
 
-    return chain([mergeWith(templateSource), options.lintFix ? applyLintFix(options.path) : noop()]);
+    return chain([mergeWith(templateSource)]);
   };
 }

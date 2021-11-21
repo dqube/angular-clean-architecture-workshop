@@ -37,6 +37,6 @@ export default function (options: DomainActionOptions): Rule {
       move(`${parsedPath.path}/business/actions`),
     ]);
 
-    return chain([mergeWith(templateSource), options.lintFix ? applyLintFix(options.path) : noop()]);
+    return chain([mergeWith(templateSource)]);
   };
 }
