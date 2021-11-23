@@ -19,6 +19,7 @@ export class NewAccountUIService extends ServiceBase {
   }
 
   createAccount(newAccount: NewAccount) {
+    this.isSendingSubject.next(true);
     this.loggingService.log(this.serviceName, Severity.Information, `Preparing to create new account for [${newAccount.emailAddress ?? 'n/a'}]`);
     this.accountsService.createAccount<NewAccountResponse>(newAccount).subscribe(
       (response) => this.handleCreateAccountResponse<NewAccountResponse>(response),
@@ -46,8 +47,13 @@ export class NewAccountUIService extends ServiceBase {
     this.handleError(error);
   }
 
+  /**
+   * Use to finish the API call. This method should be called at the end of every
+   * handling of an API operation.
+   */
   private finishCreateAccount(): void {
     // TODO: HANDLE ANY [finish] MESSAGES, NOTIFICATIONS, UI/UX CHANGES;
+    this.isSendingSubject.next(false);
     this.loggingService.log(this.serviceName, Severity.Information, `Finished processing request to [create account].`);
   }
 }
