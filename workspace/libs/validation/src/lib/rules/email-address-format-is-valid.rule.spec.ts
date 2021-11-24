@@ -1,7 +1,6 @@
 import { EmailAddressFormatIsValidRule } from './email-address-format-is-valid.rule';
 
 const showRuleMessages = true;
-const hideRuleMessages = false;
 
 describe('EmailAddressFormatIsValidRule', () => {
   it('should create instance', () => {
@@ -92,6 +91,7 @@ describe('EmailAddressFormatIsValidRule', () => {
     const rule = new EmailAddressFormatIsValidRule(
       'EmailAddressFormatIsValidRule',
       'The email address value is not valid.',
+      // eslint-disable-next-line max-len
       '12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890@turncommerce.com',
       showRuleMessages
     );

@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { LoggingService, LoggingServiceMock } from '@buildmotion/logging';
 
 import { HomeComponent } from './home.component';
 
@@ -8,7 +10,16 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      imports: [
+        RouterTestingModule,
+      ],
+      declarations: [HomeComponent],
+      providers: [
+        {
+          provide: LoggingService,
+          useClass: LoggingServiceMock
+        }
+      ]
     })
     .compileComponents();
   });
