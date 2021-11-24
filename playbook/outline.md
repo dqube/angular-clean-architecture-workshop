@@ -23,6 +23,8 @@ git checkout 5-2/accounts/add-new-account-form
 git checkout 5-3/accounts/add-new-account-template
 git checkout 5-4/accounts/new-accounts-ui-service
 git checkout 6-1/accounts/domain-service
+git checkout 6-2/accounts/handle-api-response
+git checkout 7-1/accounts/add-api-project
 ```
 
 ## Create Nx Workspace
@@ -145,12 +147,12 @@ nx workspace-schematic domain-action "createAccount" --project=accounts-service 
 ## [Accounts] API Library for Backend
 
 - [ ] generate `accounts-api` project
-  - [ ] add pre-requisite packages
-  - [ ] add `healthCheck` endpoint
-    - [ ] module
-    - [ ] controller
-    - [ ] service
-    - [ ] verify with Postman
+  - [ ] add pre-requisite packages: `yarn add -D @nrwl/nest`
+
+```ts
+nx g @nrwl/nest:application accounts-api -d
+```
+
 
 - [ ] update application configuration with `healthCheck` URL endpoint
   - [ ] local/development environment configuration

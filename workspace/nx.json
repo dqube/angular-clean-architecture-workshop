@@ -1,6 +1,4 @@
 {
-  "npmScope": "buildmotion",
-  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "workspace.json": "*",
     "package.json": { "dependencies": "*", "devDependencies": "*" },
@@ -9,6 +7,8 @@
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
+  "affected": { "defaultBase": "master" },
+  "npmScope": "buildmotion",
   "tasksRunnerOptions": { "default": { "runner": "@nrwl/workspace/tasks-runners/default", "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] } } },
   "projects": {
     "black-dashboard": { "tags": [] },
@@ -27,6 +27,7 @@
     "analytics": { "tags": [] },
     "accounts-ui": { "tags": [] },
     "accounts-types": { "tags": [] },
-    "accounts-service": { "tags": [] }
+    "accounts-service": { "tags": [] },
+    "accounts-api": { "tags": [] }
   }
 }
