@@ -3,7 +3,7 @@ import { LoggingService } from '@buildmotion/logging';
 import { Inject, Injectable } from '@angular/core';
 import { BusinessProviderService } from './business/business-provider.service';
 import { NewAccount } from '@buildmotion/accounts/types';
-import { ApiResponse } from '@buildmotion/common';
+import { ApiResponse } from '@buildmotion/types';
 import { Observable, of } from 'rxjs';
 import { IBusinessProviderService } from './business/i-business-provider.service';
 

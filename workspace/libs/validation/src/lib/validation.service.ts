@@ -1,14 +1,13 @@
-import { AbstractControl, AsyncValidatorFn, FormControl, ValidationErrors } from '@angular/forms';
-import { ApiMessage, ApiMessageType } from '@buildmotion/common';
-import { LoggingService, Severity } from '@buildmotion/logging';
-import { Observable, of } from 'rxjs';
-import { Range, RuleConstants, StringIsNotNullEmptyRange, StringIsRegExMatch, ValidationContext } from '@buildmotion/rule-engine';
-import { debounceTime, map, switchMap } from 'rxjs/operators';
-
-import { ApiResponse } from '@buildmotion/common';
 import { Injectable, Optional } from '@angular/core';
+import { AbstractControl, AsyncValidatorFn, FormControl, ValidationErrors } from '@angular/forms';
 import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
+import { LoggingService, Severity } from '@buildmotion/logging';
+import { Range, RuleConstants, StringIsNotNullEmptyRange, StringIsRegExMatch, ValidationContext } from '@buildmotion/rule-engine';
+import { ApiMessage, ApiMessageType, ApiResponse } from '@buildmotion/types';
+import { Observable, of } from 'rxjs';
+import { debounceTime, map, switchMap } from 'rxjs/operators';
 import { EmailAddressFormatIsValidRule } from './rules/email-address-format-is-valid.rule';
+
 
 @Injectable({
   providedIn: 'root',

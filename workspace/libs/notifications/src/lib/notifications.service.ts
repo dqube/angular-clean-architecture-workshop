@@ -1,12 +1,12 @@
-import { Injectable, Injector, Optional } from '@angular/core';
-import { ApiMessage, ApiResponse } from '@buildmotion/common';
+import { Injectable, Optional } from '@angular/core';
 import { ServiceBase, ServiceContext, ServiceResponse } from '@buildmotion/foundation';
 import { LoggingService, Severity } from '@buildmotion/logging';
+import { ApiMessage, ApiResponse } from '@buildmotion/types';
 import { Observable, ReplaySubject, Subscription } from 'rxjs';
 import { BusinessProviderService } from './business/business-provider.service';
 import { NotificationOptions } from './models/notification-options.model';
-import { Notification } from './models/notification.model';
 import { NotificationSeverity } from './models/notification-severity.enum';
+import { Notification } from './models/notification.model';
 import { NotifierType } from './models/notifier-type.enum';
 
 /**

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { ConfigurationService } from '@buildmotion/configuration';
 import { LoggingService } from '@buildmotion/logging';
 import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
-import { ApiResponse } from '@buildmotion/common';
+import { ApiResponse } from '@buildmotion/types';
 import { HttpAccountsServiceRepositoryService } from './http-accounts-service-repository.service';
 import { IBusinessProviderService } from './i-business-provider.service';
 import { NewAccount } from '@buildmotion/accounts/types';

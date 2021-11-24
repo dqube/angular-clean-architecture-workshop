@@ -4,7 +4,7 @@ import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
 import { NewAccount, NewAccountResponse } from '@buildmotion/accounts/types';
 import { AccountsService } from '@buildmotion/accounts/accounts-service'
 import { BehaviorSubject, Observable } from 'rxjs';
-import { ApiResponse } from '@buildmotion/common';
+import { ApiResponse } from '@buildmotion/types';
 
 @Injectable()
 export class NewAccountUIService extends ServiceBase {

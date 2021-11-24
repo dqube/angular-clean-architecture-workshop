@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { ApiMessage } from './api-message';
 
 export class ApiResponse<T> {
@@ -33,4 +34,6 @@ export class ApiResponse<T> {
   // used for CorrelationId;
 
   timestamp = new Date();
+
+  constructor() { }
 }

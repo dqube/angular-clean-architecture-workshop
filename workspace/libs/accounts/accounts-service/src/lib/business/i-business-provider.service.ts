@@ -1,5 +1,5 @@
 import { NewAccount } from '@buildmotion/accounts/types';
-import { ApiResponse } from '@buildmotion/common';
+import { ApiResponse } from '@buildmotion/types';
 import { ConfigurationService } from '@buildmotion/configuration';
 import { ServiceContext } from '@buildmotion/foundation';
 import { Observable } from 'rxjs';
