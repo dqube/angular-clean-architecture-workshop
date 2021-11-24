@@ -26,6 +26,7 @@ git checkout 6-1/accounts/domain-service
 git checkout 6-2/accounts/handle-api-response
 git checkout 7-1/accounts/add-api-project
 git checkout 7-2/accounts/add-accounts-controller
+git checkout 7-3/accounts/integrate-accounts-api
 ```
 
 ## Create Nx Workspace
@@ -164,6 +165,55 @@ nx g @nrwl/nest:service accounts --project=accounts-api -d
 
 Crete a new shared/workspace library for common types between API and application projects.
 
+```ts
+nx g @nrwl/workspace:library accounts/types -d
+```
+
+> Fix tests and linting errors
+
+Integrate application to use the API.
+
+- update configuration
+- update HTTP repository to use new endpoint (not mock)
+
+```ts
+nx serve accounts-api
+
+> nx run accounts-api:serve 
+Starting type checking service...
+Using 6 workers with 2048MB memory limit
+Type checking in progress...
+Hash: 23ecb1d325f5920e21ae
+Built at: 11/24/2021 6:57:15 AM
+Entrypoint main = main.js main.js.map
+chunk {main} main.js, main.js.map (main) 13.6 KiB [entry] [rendered]
+Debugger listening on ws://localhost:61147/307ef753-20d9-4664-ac07-bff72819c3f0
+Debugger listening on ws://localhost:61148/307ef753-20d9-4664-ac07-bff72819c3f0
+For help, see: https://nodejs.org/en/docs/inspector
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   [NestFactory] Starting Nest application...
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   [InstanceLoader] AppModule dependencies initialized +7ms
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   [InstanceLoader] AccountsModule dependencies initialized +0ms
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   [RoutesResolver] AppController {/api}: +2ms
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   [RouterExplorer] Mapped {/api, GET} route +1ms
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   [RoutesResolver] AccountsController {/api/accounts}: +0ms
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   [RouterExplorer] Mapped {/api/accounts, POST} route +0ms
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   [RoutesResolver] AccountsController {/api/accounts}: +1ms
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   [RouterExplorer] Mapped {/api/accounts, POST} route +0ms
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   [NestApplication] Nest application successfully started +0ms
+[Nest] 9000   - 11/24/2021, 6:57:15 AM   Listening at http://localhost:3333/api +3ms
+No type errors found
+Version: typescript 4.0.8
+Time: 1710ms
+```
+
+Verify the integration. Error?
+
+```ts
+Access to XMLHttpRequest at 'http://localhost:3333/api/accounts' 
+  from origin 'http://localhost:4200' has been blocked by CORS policy: 
+  Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+```
+
 - [ ] generate `create-account` component module with routes in `client` application project
   - [ ] update navigation/menu to target route
   - [ ] generate `ui-service` for the `create-account` component
@@ -192,6 +242,7 @@ Crete a new shared/workspace library for common types between API and applicatio
     - [ ] implement call to `createAccountAction`
     - [ ] implement call to `HttpAccountsRepository`
       - [ ] return mock API response
+
 - [ ] add API endpoint in `accounts-api` project to handle `POST` of account information
   - [ ] implement `createAccount` operation in controller
   - [ ] implement `createAccount operation in service
