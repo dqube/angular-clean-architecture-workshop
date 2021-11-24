@@ -16,5 +16,6 @@ module.exports = {
     '<rootDir>/libs/accounts/accounts-ui',
     '<rootDir>/libs/accounts/types',
     '<rootDir>/libs/accounts/accounts-service',
+    '<rootDir>/apps/accounts-api',
   ],
 };
