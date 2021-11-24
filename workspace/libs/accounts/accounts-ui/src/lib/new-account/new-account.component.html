@@ -98,7 +98,8 @@
   <ng-template #resultTemplate>
     <ng-container *ngIf="isSuccess$ | async">
       <!-- SHOW SUCCESS INDICATORS/MESSAGE -->
-      <p>Successfully created account.</p>
+      <h2>Successfully created account.</h2>
+      <p>Please check your email to verify your account. See ya later.</p>
     </ng-container>
     <ng-container *ngIf="isError$ | async;">
       <!-- SHOW ERROR MESSAGE HERE -->

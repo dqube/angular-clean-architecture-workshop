@@ -3,7 +3,7 @@ import { AppEnvironment } from '@buildmotion/configuration';
 
 export const AppConfig: IConfiguration = {
   apiConfig: {
-    baseUrl: 'https://api.buildmotion.io/v1/',
+    baseUrl: 'http://localhost:3333/api',
     health: 'https://api.buildmotion.io/v1/dev/health',
     csrf: '',
     security: '',
