@@ -7,6 +7,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { ValidationService } from '@buildmotion/validation';
 import { NewAccountUIService } from './new-account-ui.service';
 import { NewAccount } from '@buildmotion/accounts/types';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'buildmotion-new-account',
@@ -15,6 +16,11 @@ import { NewAccount } from '@buildmotion/accounts/types';
   providers: [ValidationService]
 })
 export class NewAccountComponent extends ComponentBase implements OnInit {
+
+  public readonly isError$: Observable<boolean> = this.uiService.isError$;
+  public readonly isReady$: Observable<boolean> = this.uiService.isReady$;
+  public readonly isSending$: Observable<boolean> = this.uiService.isSending$;
+  public readonly isSuccess$: Observable<boolean> = this.uiService.isSuccess$;
 
   form: FormGroup;
 
@@ -33,6 +39,7 @@ export class NewAccountComponent extends ComponentBase implements OnInit {
 
   ngOnInit(): void {
     this.loggingService.log(this.componentName, Severity.Information, `Preparing to initialize component.`);
+    this.uiService.reset();
     this.initializeForm();
   }
 

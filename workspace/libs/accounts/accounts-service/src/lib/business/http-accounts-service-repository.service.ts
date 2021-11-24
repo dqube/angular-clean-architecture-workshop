@@ -27,7 +27,7 @@ import { Guid } from 'guid-typescript';
 @Injectable({
   providedIn: 'root',
 })
-export class HttpAccountsServiceRepositoryService extends ServiceBase implements IHttpAccountsServiceRepositoryService {
+export class HttpAccountsServiceRepositoryService extends ServiceBase implements IHttpAccountsServiceRepositoryService, IHttpAccountsServiceRepositoryService {
   apiConfig: IAPIConfig;
 
   constructor(private httpService: HttpService, private configService: ConfigurationService, loggingService: LoggingService, serviceContext: ServiceContext) {
@@ -41,8 +41,7 @@ export class HttpAccountsServiceRepositoryService extends ServiceBase implements
     }
   }
 
-  // createAccount<T>(newAccount: NewAccount): Observable<ApiResponse<T>> {
-  createAccount<T>(newAccount: NewAccount): any {
+  createAccount<T>(newAccount: NewAccount): Observable<any> {
     // const requestUrl = `${this.apiConfig.baseUrl}/accounts`;
     // this.loggingService.log(this.serviceName, Severity.Information, `Preparing to call API to...${requestUrl}`);
     // const options = this.httpService.createOptions(HttpRequestMethod.post, this.httpService.createHeader(), requestUrl, newAccount, false);

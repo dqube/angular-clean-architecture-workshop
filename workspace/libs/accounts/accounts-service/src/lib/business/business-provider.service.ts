@@ -9,14 +9,17 @@ import { HttpAccountsServiceRepositoryService } from './http-accounts-service-re
 import { IBusinessProviderService } from './i-business-provider.service';
 import { NewAccount } from '@buildmotion/accounts/types';
 import { CreateAccountAction } from './actions/create-account.action';
+import { IHttpAccountsServiceRepositoryService } from './i-http-accounts-service-repository.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class BusinessProviderService extends ServiceBase implements IBusinessProviderService {
+
+
+export class BusinessProviderService extends ServiceBase implements IBusinessProviderService, IBusinessProviderService {
 
   constructor(
-    @Inject(HttpAccountsServiceRepositoryService) public apiService: HttpAccountsServiceRepositoryService,
+    @Inject(HttpAccountsServiceRepositoryService) public apiService: IHttpAccountsServiceRepositoryService,
     public configService: ConfigurationService,
     loggingService: LoggingService,
     serviceContext: ServiceContext

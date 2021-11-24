@@ -8,9 +8,15 @@ import { ApiResponse } from '@buildmotion/common';
 
 @Injectable()
 export class NewAccountUIService extends ServiceBase {
-
+  private isErrorSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  private isReadySubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
   private isSendingSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  private isSuccessSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
+  public readonly isError$: Observable<boolean> = this.isErrorSubject.asObservable();
+  public readonly isReady$: Observable<boolean> = this.isReadySubject.asObservable();
   public readonly isSending$: Observable<boolean> = this.isSendingSubject.asObservable();
+  public readonly isSuccess$: Observable<boolean> = this.isSuccessSubject.asObservable();
 
   constructor(
     private accountsService: AccountsService,
@@ -19,7 +25,11 @@ export class NewAccountUIService extends ServiceBase {
   }
 
   createAccount(newAccount: NewAccount) {
+    this.isErrorSubject.next(false);
+    this.isReadySubject.next(false);
     this.isSendingSubject.next(true);
+    this.isSuccessSubject.next(false);
+
     this.loggingService.log(this.serviceName, Severity.Information, `Preparing to create new account for [${newAccount.emailAddress ?? 'n/a'}]`);
     this.accountsService.createAccount<NewAccountResponse>(newAccount).subscribe(
       (response) => this.handleCreateAccountResponse<NewAccountResponse>(response),
@@ -28,9 +38,20 @@ export class NewAccountUIService extends ServiceBase {
     );
   }
 
+  /**
+   * Use to reset the UI/form state to default.
+   */
+  reset() {
+    this.isErrorSubject.next(false);
+    this.isReadySubject.next(true);
+    this.isSendingSubject.next(false);
+    this.isSuccessSubject.next(false);
+  }
+
   private handleCreateAccountResponse<T>(response: ApiResponse<T>): void {
     if (response) {
       if (response.isSuccess) {
+        this.isSuccessSubject.next(true);
         this.loggingService.log(this.serviceName, Severity.Information, `Preparing to handle successful response for [create account].`);
       } else {
         this.loggingService.log(this.serviceName, Severity.Warning, `Preparing to handle failed/unsuccessful response for [create account].`);
@@ -44,6 +65,7 @@ export class NewAccountUIService extends ServiceBase {
 
   private handleCreateAccountError(error: Error): void {
     // TODO: HANDLE ANY [error] MESSAGES, NOTIFICATIONS, UI/UX CHANGES;
+    this.isErrorSubject.next(true);
     this.handleError(error);
   }
 
