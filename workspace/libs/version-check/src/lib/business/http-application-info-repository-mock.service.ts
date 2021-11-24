@@ -6,7 +6,7 @@ import { LoggingService } from '@buildmotion/logging';
 import { Observable, of } from 'rxjs';
 import { IHttpApplicationInfoRepositoryService } from './i-http-application-info-repository.service';
 import { ApplicationInfo } from '../application-info.model';
-import { ApiResponse } from '@buildmotion/common';
+import { ApiResponse } from '@buildmotion/types';
 
 @Injectable({
   providedIn: 'root',

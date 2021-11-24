@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ApiResponse } from '@buildmotion/common';
+import { ApiResponse } from '@buildmotion/types';
 import { HttpRequestMethod } from './http-request-methods.enum';
 import { HttpRequestOptions } from './http-request-options';
 import { LoggingService, Severity } from '@buildmotion/logging';

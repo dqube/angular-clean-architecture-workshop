@@ -2,12 +2,11 @@ import { Injectable, Inject } from '@angular/core';
 import { ConfigurationService } from '@buildmotion/configuration';
 import { LoggingService } from '@buildmotion/logging';
 import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
-import { ApiResponse } from '@buildmotion/common';
 import { Observable } from 'rxjs';
 import { IBusinessProviderService } from './i-business-provider.service';
 import { HttpApplicationInfoRepositoryService } from './http-application-info-repository.service';
 import { RetrieveApplicationInfoAction } from './actions/retrieve-application-info.action';
-
+import { ApiResponse } from '@buildmotion/types';
 @Injectable({
   providedIn: 'root',
 })

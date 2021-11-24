@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { ConfigurationService } from '@buildmotion/configuration';
 import { LoggingService } from '@buildmotion/logging';
 import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
-import { ApiResponse } from '@buildmotion/common';
+import { ApiResponse } from '@buildmotion/types';
 import { Observable } from 'rxjs';
 import { IBusinessProviderService } from './i-business-provider.service';
 import { HttpApplicationInfoRepositoryService } from './http-application-info-repository.service';

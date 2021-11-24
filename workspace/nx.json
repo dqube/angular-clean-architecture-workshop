@@ -28,6 +28,7 @@
     "accounts-ui": { "tags": [] },
     "accounts-types": { "tags": [] },
     "accounts-service": { "tags": [] },
-    "accounts-api": { "tags": [] }
+    "accounts-api": { "tags": [] },
+    "types": { "tags": [] }
   }
 }

@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { Injectable } from '@angular/core';
+import { NewAccount, NewAccountResponse } from '@buildmotion/accounts/types';
 import { ConfigurationService, IAPIConfig, IConfiguration } from '@buildmotion/configuration';
 import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
-import { HttpRequestMethod, HttpService } from '@buildmotion/http-service';
-import { LoggingService, Severity } from '@buildmotion/logging';
-import { Injectable } from '@angular/core';
-import { IHttpAccountsServiceRepositoryService } from './i-http-accounts-service-repository.service';
-import { NewAccount, NewAccountResponse } from '@buildmotion/accounts/types';
-import { Observable, of } from 'rxjs';
-import { ApiResponse } from '@buildmotion/common';
+import { HttpService } from '@buildmotion/http-service';
+import { LoggingService } from '@buildmotion/logging';
+import { ApiResponse } from '@buildmotion/types';
 import { Guid } from 'guid-typescript';
+import { Observable, of } from 'rxjs';
+import { IHttpAccountsServiceRepositoryService } from './i-http-accounts-service-repository.service';
 
 /**
  * Use this service to construct and execute HTTP/API requests for the application.
