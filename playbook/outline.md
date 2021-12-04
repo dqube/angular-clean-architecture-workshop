@@ -7,6 +7,7 @@
   - git checkout 2_setup/add-code-to-x-concern-libs
   - git checkout 2_setup/add-cross-cutting-libraries
 - Section 3
+  - git checkout 3_app/configure-application
 - Section 4
   - git checkout 4_tools/generators-and-schematics
 - Section 5
