@@ -1,1 +1,0 @@
-# CLEAN Architecture with Angular

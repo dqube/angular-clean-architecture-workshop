@@ -45,10 +45,10 @@ git clone https://github.com/buildmotion/angular-clean-architecture-workshop.git
 Repository Branches
 
 ```ts
-git checkout 1_setup/add-angular-application
 git checkout 1_setup/create-nx-workspace
-git checkout 2_setup/add-code-to-x-concern-libs
+git checkout 1_setup/add-angular-application
 git checkout 2_setup/add-cross-cutting-libraries
+git checkout 2_setup/add-code-to-x-concern-libs
 git checkout 3_app/configure-application
 git checkout 4_tools/generators-and-schematics
 git checkout 5_accounts/create-ui-library
