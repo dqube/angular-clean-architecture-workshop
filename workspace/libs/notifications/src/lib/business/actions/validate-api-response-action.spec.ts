@@ -2,7 +2,7 @@ import { HttpClient, HttpHandler } from '@angular/common/http';
 
 import { TestBed } from '@angular/core/testing';
 import { ActionResult } from '@buildmotion/actions';
-import { ApiResponse, ApiMessage, ApiMessageType } from '@buildmotion/common';
+import { ApiResponse, ApiMessage, ApiMessageType } from '@buildmotion/types';
 import { ServiceContext } from '@buildmotion/foundation';
 import { LoggingService, LoggingServiceMock } from '@buildmotion/logging';
 import { ValidateApiResponseAction } from './validate-api-response-action';

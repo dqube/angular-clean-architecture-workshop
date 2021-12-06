@@ -1,0 +1,22 @@
+import { ConfigurationService } from '@buildmotion/configuration';
+import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
+import { HttpService } from '@buildmotion/http-service';
+import { LoggingService } from '@buildmotion/logging';
+import { Injectable } from '@angular/core';
+import { IHttp<%= classify(name) %>RepositoryService } from './i-http-<%= dasherize(name) %>-repository.service';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class Http<%= classify(name) %>RepositoryService extends ServiceBase implements IHttp<%= classify(name) %>RepositoryService {
+  constructor(private httpService: HttpService, private configService: ConfigurationService, loggingService: LoggingService, serviceContext: ServiceContext) {
+    super('Http<%= classify(name) %>RepositoryService', loggingService, serviceContext);
+  }
+
+  // perform<%= classify(name) %><T>(someInput: string): Observable<any> {
+  //   const requestUrl = `${this.configService.settings.appConfig.apiURL}VerifyMonitoredTerm`;
+  //   this.loggingService.log(this.serviceName, Severity.Information, `Preparing to call API to... `);
+  //   const options = this.httpService.createOptions(HttpRequestMethod.post, this.httpService.createHeader(), requestUrl, someInput, false);
+  //   return this.httpService.execute(options);
+  // }
+}

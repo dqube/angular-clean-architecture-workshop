@@ -1,5 +1,5 @@
 import { Action, ActionResult } from '@buildmotion/actions';
-import { ApiMessage, ApiMessageType, ApiResponse } from '@buildmotion/common';
+import { ApiMessage, ApiMessageType, ApiResponse } from '@buildmotion/types';
 import { Severity, ILoggingService } from '@buildmotion/logging';
 import { CompositeRule, RuleResult, ValidationContext } from '@buildmotion/rule-engine';
 import { Observable, of, throwError } from 'rxjs';

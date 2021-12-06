@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ApiResponse } from '@buildmotion/common';
+import { ApiResponse } from '@buildmotion/types';
 import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
 import { LoggingService } from '@buildmotion/logging';
 import { Observable } from 'rxjs';

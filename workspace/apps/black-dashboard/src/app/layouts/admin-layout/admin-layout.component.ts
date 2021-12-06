@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import PerfectScrollbar from 'perfect-scrollbar';
 import { ToastrService } from 'ngx-toastr';
+import { ComponentBase } from '@buildmotion/foundation';
+import { LoggingService } from '@buildmotion/logging';
 
 const misc: any = {
   sidebar_mini_active: true
@@ -12,9 +15,9 @@ const misc: any = {
   templateUrl: './admin-layout.component.html',
   styleUrls: ['./admin-layout.component.scss']
 })
-export class AdminLayoutComponent implements OnInit {
-  constructor(public router: Router, public toastr: ToastrService) {
-    console.log(`Loading[AdminLayoutComponent]...`);
+export class AdminLayoutComponent extends ComponentBase implements OnInit {
+  constructor(loggingService: LoggingService, router: Router, public toastr: ToastrService) {
+    super('AdminLayoutComponent', loggingService, router);
   }
   @HostListener('window:scroll', ['$event'])
   showNavbarButton = () => {

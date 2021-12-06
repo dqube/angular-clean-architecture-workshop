@@ -4,7 +4,6 @@ import { NavigationEnd, Router } from '@angular/router';
 import { LoggingService, Severity } from '@buildmotion/logging';
 import { Guid } from 'guid-typescript';
 import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
 import { AlertNotification } from './models/alert-notification.model';
 import { AlertTypes } from './models/alert-types.constants';
 import { ErrorResponse } from './models/error-response.model';

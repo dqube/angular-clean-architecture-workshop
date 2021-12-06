@@ -20,6 +20,10 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
+      {
+        path: 'accounts',
+        loadChildren: () => import('@buildmotion/accounts/accounts-ui').then((m) => m.AccountsUiModule)
+      }
     ]
   },
   // {

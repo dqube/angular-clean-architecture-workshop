@@ -1,0 +1,16 @@
+import { TestBed } from '@angular/core/testing';
+
+import { <%= classify(name) %>UIService } from './<%= dasherize(name) %>.service';
+
+describe('<%= classify(name) %>UIService', () => {
+  let service: <%= classify(name) %>UIService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(<%= classify(name) %>UIService);
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+});
