@@ -29,6 +29,8 @@
     "accounts-types": { "tags": [] },
     "accounts-service": { "tags": [] },
     "accounts-api": { "tags": [] },
-    "types": { "tags": [] }
+    "types": { "tags": [] },
+    "admin": { "tags": [] },
+    "admin-e2e": { "tags": [], "implicitDependencies": ["admin"] }
   }
 }

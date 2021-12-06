@@ -1,6 +1,7 @@
 import { BusinessActionBase } from './business-action-base';
 import { Severity } from '@buildmotion/logging';
 import { NewAccount } from '@buildmotion/accounts/types';
+import { IsNotNullOrUndefined, IsTrue } from '@buildmotion/rule-engine';
 
 /**
  * Use this action to perform business logic with validation and business rules.
@@ -19,6 +20,22 @@ export class CreateAccountAction<T> extends BusinessActionBase<T> {
    */
   preValidateAction() {
     this.loggingService.log(this.actionName, Severity.Information, `Preparing to validate the new account information for ${this.newAccount.emailAddress ?? 'n/a'}.`);
+    this.validationContext.addRule(
+      new IsNotNullOrUndefined(
+        'DataIsValid',
+        'The account info is not right.',
+        this.newAccount,
+        this.showRuleMessages
+      )
+    )
+    // .addRule(
+    //   new IsTrue(
+    //     'AcceptedIsValid',
+    //     'You must accept the terms and conditions.',
+    //     this.newAccount.acceptTermsConditions,
+    //     this.showRuleMessages
+    //   )
+    // );
   }
 
   /**

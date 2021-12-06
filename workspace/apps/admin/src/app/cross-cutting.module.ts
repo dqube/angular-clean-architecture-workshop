@@ -84,11 +84,7 @@ export class CrossCuttingModule {
         {
           provide: APP_INITIALIZER,
           useFactory: initializeLogWriter,
-          deps: [
-            LoggingService,
-            ConsoleWriter,
-            DataDogWriterService
-          ],
+          deps: [LoggingService, ConsoleWriter, DataDogWriterService],
           multi: true,
         },
         NotificationService,

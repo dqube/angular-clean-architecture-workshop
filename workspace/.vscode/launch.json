@@ -8,7 +8,7 @@
         "name": "Dashboard",
         "request": "launch",
         "type": "pwa-chrome",
-        "url": "http://localhost:4200",
+        "url": "http://localhost:56152",
         "webRoot": "${workspaceFolder}"
       },
       {

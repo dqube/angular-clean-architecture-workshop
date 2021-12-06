@@ -7,6 +7,7 @@ import { NewAccountComponent } from './new-account.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewAccountUIService } from './new-account-ui.service';
 import { AccountsService } from '@buildmotion/accounts/accounts-service';
+import { AccountsUiModule } from '../accounts-ui.module';
 
 const routes: Routes = [
   { path: '', component: NewAccountComponent }
@@ -21,6 +22,7 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     NewAccountRoutingModule,
+    AccountsUiModule,
     RouterModule.forChild(routes)
   ],
   providers: [AccountsService, NewAccountUIService]

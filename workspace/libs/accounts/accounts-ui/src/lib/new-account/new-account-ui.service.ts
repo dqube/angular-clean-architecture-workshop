@@ -5,6 +5,7 @@ import { NewAccount, NewAccountResponse } from '@buildmotion/accounts/types';
 import { AccountsService } from '@buildmotion/accounts/accounts-service'
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ApiResponse } from '@buildmotion/types';
+import { Notification, NotificationService, NotificationSeverity, NotifierType } from '@buildmotion/notifications';
 
 @Injectable()
 export class NewAccountUIService extends ServiceBase {
@@ -20,6 +21,7 @@ export class NewAccountUIService extends ServiceBase {
 
   constructor(
     private accountsService: AccountsService,
+    private notificationService: NotificationService,
     loggingService: LoggingService, serviceContext: ServiceContext) {
     super('NewAccountUIService', loggingService, serviceContext);
   }
@@ -53,6 +55,8 @@ export class NewAccountUIService extends ServiceBase {
       if (response.isSuccess) {
         this.isSuccessSubject.next(true);
         this.loggingService.log(this.serviceName, Severity.Information, `Preparing to handle successful response for [create account].`);
+        const notice = new Notification('Great news..', 'Your account is created. Or, something...', NotifierType.Toast, NotificationSeverity.success);
+        this.notificationService.addMessage(notice);
       } else {
         this.loggingService.log(this.serviceName, Severity.Warning, `Preparing to handle failed/unsuccessful response for [create account].`);
         // TODO: HANDLE ANY [unsuccess] MESSAGES, NOTIFICATIONS, UI/UX CHANGES;
