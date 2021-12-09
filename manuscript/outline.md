@@ -1,0 +1,25 @@
+# Outline
+
+- Section 1
+  - git checkout 1_setup/create-nx-workspace
+  - git checkout 1_setup/add-angular-application
+- Section 2
+  - git checkout 2_setup/add-cross-cutting-libraries
+  - git checkout 2_setup/add-code-to-x-concern-libs
+- Section 3
+  - git checkout 3_app/configure-application
+- Section 4
+  - git checkout 4_tools/generators-and-schematics
+- Section 5
+  - git checkout 5_accounts/create-ui-library
+  - git checkout 5-2/accounts/add-new-account-form
+  - git checkout 5-3/accounts/add-new-account-template
+  - git checkout 5-4/accounts/new-accounts-ui-service
+- Section 6
+  - git checkout 6-1/accounts/domain-service
+  - git checkout 6-2/accounts/handle-api-response
+- Section 7
+  - git checkout 7-1/accounts/add-api-project
+  - git checkout 7-2/accounts/add-accounts-controller
+  - git checkout 7-3/accounts/integrate-accounts-api
+  - git checkout 7-4/accounts/api-debugging-tools

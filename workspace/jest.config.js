@@ -12,5 +12,12 @@ module.exports = {
     '<rootDir>/libs/validation',
     '<rootDir>/libs/notifications',
     '<rootDir>/libs/version-check',
+    '<rootDir>/libs/analytics',
+    '<rootDir>/libs/accounts/accounts-ui',
+    '<rootDir>/libs/accounts/types',
+    '<rootDir>/libs/accounts/accounts-service',
+    '<rootDir>/apps/accounts-api',
+    '<rootDir>/libs/types',
+    '<rootDir>/apps/admin',
   ],
 };

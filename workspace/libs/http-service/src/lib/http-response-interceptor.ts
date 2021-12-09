@@ -6,7 +6,7 @@ import {
   HttpRequest,
   HttpResponse
 } from '@angular/common/http';
-import { ApiResponse } from '@buildmotion/common';
+import { ApiResponse } from '@buildmotion/types';
 import { Guid } from 'guid-typescript';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';

@@ -14,6 +14,12 @@ export abstract class LogWriter implements ILogWriter {
    * Using the [template method] design pattern.
    */
   execute(): void {
+    /**
+     * 1. setup
+     * 2. validate
+     * 3. write
+     * 4. finish
+     */
     this.setup();
     if (this.validateEntry()) {
       this.write();

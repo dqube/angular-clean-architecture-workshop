@@ -1,16 +1,16 @@
-@import '../../../../../portal/assets/src/lib/styles/styles.scss';
+// @import '../../../../../portal/assets/src/lib/styles/styles.scss';
 
 .btn {
-  background-color: $button-primary;
+  // background-color: $button-primary;
   border: 1px solid transparent;
   border-radius: 6px;
-  color: $white;
+  // color: $white;
   cursor: pointer;
   font-size: 16px;
   padding: 12px;
 
   &[disabled] {
-    background-color: $button-primary-disabled;
+    // background-color: $button-primary-disabled;
     pointer-events: none;
   }
 

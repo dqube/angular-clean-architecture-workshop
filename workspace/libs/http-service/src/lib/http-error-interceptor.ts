@@ -1,4 +1,4 @@
-import { ApiMessage, ApiMessageType, ApiResponse } from '@buildmotion/common';
+import { ApiMessage, ApiMessageType, ApiResponse } from '@buildmotion/types';
 import {
   HttpErrorResponse,
   HttpEvent,
