@@ -9,7 +9,7 @@ export class AccountsService {
     if (account && account.acceptTermsConditions) {
       // FIXME: UPDATE TO USE REAL DATABASE --> SIMULATES DATA ACCESS;
       const result: NewAccountResponse = new NewAccountResponse();
-      result.accountId = '1234';
+      result.accountId = Guid.create().toString();;
       result.emailAddress = account.emailAddress;
       result.userId = Guid.create().toString();
 

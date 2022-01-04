@@ -2,6 +2,7 @@
 import { NewAccount, NewAccountResponse } from '@buildmotion/accounts/types';
 import { ApiMessage, ApiMessageType, ControllerBase } from '@buildmotion/types';
 import { Body, Controller, HttpStatus, Post, Res } from '@nestjs/common';
+import { ApiResponse } from '@nestjs/swagger';
 import { AccountsService } from './accounts.service';
 
 
@@ -12,6 +13,9 @@ export class AccountsController extends ControllerBase {
     super();
   }
 
+  @ApiResponse({ type: 'NewAccount', status: HttpStatus.CREATED, description: 'Created new account.' })
+  @ApiResponse({ status: HttpStatus.BAD_REQUEST, description: 'Error while processing request to create new account.' })
+  @ApiResponse({ status: HttpStatus.INTERNAL_SERVER_ERROR, description: 'Failed to create account.' })
   @Post()
   async addAccount(@Body() accountDto: NewAccount, @Res() response: any) {
     try {

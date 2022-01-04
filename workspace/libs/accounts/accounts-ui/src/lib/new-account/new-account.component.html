@@ -10,10 +10,10 @@
             </div>
             <div class="card-body">
               <!-- EMAIL ADDRESS -->
-              <div class="form-group has-label" [ngClass]="{
-                                                                                              'has-danger': !form.valid && emailAddress.touched && emailAddress.invalid,
-                                                                                              'has-success': form.valid && emailAddress.touched && emailAddress.valid
-                                                                                            }">
+                <div class="form-group has-label" [ngClass]="{
+                                    'has-danger': !form.valid && emailAddress.touched && emailAddress.invalid,
+                                    'has-success': form.valid && emailAddress.touched && emailAddress.valid
+                                  }">
                 <label> Email Address * </label>
                 <input class="form-control" name="email" formControlName="emailAddress" type="email" />
                 <label class="error"
