@@ -28,15 +28,10 @@
       "@buildmotion/version-check": ["libs/version-check/src/index.ts"],
       "@buildmotion/analytics": ["libs/analytics/src/index.ts"],
       "@buildmotion/accounts/accounts-ui": ["libs/accounts/accounts-ui/src/index.ts"],
-      "@buildmotion/accounts/types": [
-        "libs/accounts/types/src/index.ts"
-      ],
-      "@buildmotion/accounts/accounts-service": [
-        "libs/accounts/accounts-service/src/index.ts"
-      ],
-      "@buildmotion/types": [
-        "libs/types/src/index.ts"
-      ]
+      "@buildmotion/accounts/types": ["libs/accounts/types/src/index.ts"],
+      "@buildmotion/accounts/accounts-service": ["libs/accounts/accounts-service/src/index.ts"],
+      "@buildmotion/types": ["libs/types/src/index.ts"],
+      "@buildmotion/api/accounts-bl": ["libs/api/accounts-bl/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

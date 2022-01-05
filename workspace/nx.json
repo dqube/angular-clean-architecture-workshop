@@ -31,6 +31,7 @@
     "accounts-api": { "tags": [] },
     "types": { "tags": [] },
     "admin": { "tags": [] },
-    "admin-e2e": { "tags": [], "implicitDependencies": ["admin"] }
+    "admin-e2e": { "tags": [], "implicitDependencies": ["admin"] },
+    "api-accounts-bl": { "tags": [] }
   }
 }

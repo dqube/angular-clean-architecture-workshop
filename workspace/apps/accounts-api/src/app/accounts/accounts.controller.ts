@@ -19,7 +19,7 @@ export class AccountsController extends ControllerBase {
   @Post()
   async addAccount(@Body() accountDto: NewAccount, @Res() response: any) {
     try {
-      const newContactResponse: NewAccountResponse = await this.accountsService.createAccount(accountDto);
+      const newContactResponse: NewAccountResponse = await this.accountsService.createAccount<NewAccountResponse>(accountDto);
       this.addCorsToHeader(response);
       if (newContactResponse && this.accountsService) {
         const messages: ApiMessage[] = [{ code: 'ACCOUNT_CREATE', message: 'We successfully created your account. Please check your email to verify.', messageType: ApiMessageType.Information }];
