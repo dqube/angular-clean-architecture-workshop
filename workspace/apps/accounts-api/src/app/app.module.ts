@@ -1,3 +1,4 @@
+import { AccountsBLService, BusinessProviderService } from '@buildmotion/api/accounts-bl';
 import { Module } from '@nestjs/common';
 import { AccountsController } from './accounts/accounts.controller';
 import { AccountsModule } from './accounts/accounts.module';
@@ -9,6 +10,6 @@ import { AppService } from './app.service';
 @Module({
   imports: [AccountsModule],
   controllers: [AppController, AccountsController],
-  providers: [AppService, AccountsService],
+  providers: [AppService, AccountsService, AccountsBLService, BusinessProviderService],
 })
 export class AppModule {}

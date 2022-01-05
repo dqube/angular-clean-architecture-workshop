@@ -104,3 +104,66 @@ Response:
     ]
     }
 ```
+
+## Domain Service Layer (Business Logic)
+
+Create a new library project for the NestJS API application. Allows us to encapsulate the business logic - and provide an API to the consumer/controller (via facade pattern).
+
+```ts
+nx g @nrwl/nest:library accounts-bl --directory api
+
+nx g @nrwl/nest:service lib/accounts-bl --project=api-accounts-bl --flat   
+CREATE libs/api/accounts-bl/src/lib/accounts-bl.service.spec.ts
+CREATE libs/api/accounts-bl/src/lib/accounts-bl.service.ts
+UPDATE libs/api/accounts-bl/src/lib/api-accounts-bl.module.ts
+```
+
+### Business Logic
+
+```ts
+nx g @nrwl/nest:service lib/business/businessProvider --project=api-accounts-bl --flat  
+CREATE libs/api/accounts-bl/src/lib/business/business-provider.service.spec.ts
+CREATE libs/api/accounts-bl/src/lib/business/business-provider.service.ts
+UPDATE libs/api/accounts-bl/src/lib/api-accounts-bl.module.ts
+```
+
+Create Action
+
+```ts
+nx workspace-schematic domain-action "createAccount" --project=api-accounts-bl
+yarn run v1.22.10
+warning ../../../../package.json: No license field
+$ /Users/valencia/work/github/angular-clean-architecture-workshop/workspace/node_modules/.bin/tsc -p /Users/valencia/work/github/angular-clean-architecture-workshop/workspace/tools/tsconfig.generated.json
+✨  Done in 1.00s.
+
+>  NX  Executing your local schematic: domain-action
+
+CREATE libs/api/accounts-bl/src/lib/business/actions/create-account.action.spec.ts (207 bytes)
+CREATE libs/api/accounts-bl/src/lib/business/actions/create-account.action.ts (1134 bytes)
+```
+
+> NX  Executing your local schematic: domain-action
+
+> Error: Invalid format version detected - Expected:[ 1 ] Found: [ 2 ]
+>     at Object.readJsonWorkspace (/Users/valencia/work/github/angular-clean-architecture-workshop/> workspace/node_modules/@angular-devkit/core/src/workspace/json/reader.js:31:15)
+>     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+>     at async Object.readWorkspace (/Users/valencia/work/github/> angular-clean-architecture-workshop/workspace/node_modules/@angular-devkit/core/src/> workspace/core.js:90:25)
+>     at async getWorkspace (/Users/valencia/work/github/angular-clean-architecture-workshop/> workspace/node_modules/@schematics/angular/utility/workspace.js:53:27)
+>     at async Object.createDefaultPath (/Users/valencia/work/github/> angular-clean-architecture-workshop/workspace/node_modules/@schematics/angular/utility/> workspace.js:68:23)
+
+Fix: 
+
+```ts
+const formatVersion = versionNode.value.value;
+if (formatVersion !== 1) {
+    // throw new Error(`Invalid format version detected - Expected:[ 1 ] Found: [ ${formatVersion} ]`);
+}
+```
+
+Business Action Base
+
+```ts
+nx g @nrwl/nest:class lib/business/actions/businessActionBase --project=api-accounts-bl --flat
+CREATE libs/api/accounts-bl/src/lib/business/actions/business-action-base.spec.ts
+CREATE libs/api/accounts-bl/src/lib/business/actions/business-action-base.ts
+```
